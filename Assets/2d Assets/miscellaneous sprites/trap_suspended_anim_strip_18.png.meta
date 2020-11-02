@@ -1,0 +1,922 @@
+fileFormatVersion: 2
+guid: bf7f9e9730f291642b07a58f16ca51b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6782458123959412808
+    second: trap_suspended_anim_strip_18_0
+  - first:
+      213: 4429818497583414520
+    second: trap_suspended_anim_strip_18_1
+  - first:
+      213: 9059850130054237318
+    second: trap_suspended_anim_strip_18_2
+  - first:
+      213: 3895677650216918021
+    second: trap_suspended_anim_strip_18_3
+  - first:
+      213: -4200403697739519434
+    second: trap_suspended_anim_strip_18_4
+  - first:
+      213: 5422600506294722241
+    second: trap_suspended_anim_strip_18_5
+  - first:
+      213: -3458414997968490293
+    second: trap_suspended_anim_strip_18_6
+  - first:
+      213: 188567066741601211
+    second: trap_suspended_anim_strip_18_7
+  - first:
+      213: 2671618440806799345
+    second: trap_suspended_anim_strip_18_8
+  - first:
+      213: -2239109628542883412
+    second: trap_suspended_anim_strip_18_9
+  - first:
+      213: -2354111680471342376
+    second: trap_suspended_anim_strip_18_10
+  - first:
+      213: 4521207015666020279
+    second: trap_suspended_anim_strip_18_11
+  - first:
+      213: 7787030385759691179
+    second: trap_suspended_anim_strip_18_12
+  - first:
+      213: -6752857629480871278
+    second: trap_suspended_anim_strip_18_13
+  - first:
+      213: -2600381812262764595
+    second: trap_suspended_anim_strip_18_14
+  - first:
+      213: 6643189836663336534
+    second: trap_suspended_anim_strip_18_15
+  - first:
+      213: -5641805808809206225
+    second: trap_suspended_anim_strip_18_16
+  - first:
+      213: -8393683731355118909
+    second: trap_suspended_anim_strip_18_17
+  - first:
+      213: 4652738843219183519
+    second: trap_suspended_anim_strip_18_18
+  - first:
+      213: 364898379008424091
+    second: trap_suspended_anim_strip_18_19
+  - first:
+      213: 6436145786600244315
+    second: trap_suspended_anim_strip_18_20
+  - first:
+      213: 4870921729716357409
+    second: trap_suspended_anim_strip_18_21
+  - first:
+      213: 2014709419181001081
+    second: trap_suspended_anim_strip_18_22
+  - first:
+      213: 4633620057398889389
+    second: trap_suspended_anim_strip_18_23
+  - first:
+      213: 3164010083655498196
+    second: trap_suspended_anim_strip_18_24
+  - first:
+      213: 8476218217574827416
+    second: trap_suspended_anim_strip_18_25
+  - first:
+      213: -6692100253626149765
+    second: trap_suspended_anim_strip_18_26
+  - first:
+      213: 1716204852594082030
+    second: trap_suspended_anim_strip_18_27
+  - first:
+      213: 1907807732741879461
+    second: trap_suspended_anim_strip_18_28
+  - first:
+      213: 7881070103408806304
+    second: trap_suspended_anim_strip_18_29
+  - first:
+      213: -5899106062425663603
+    second: trap_suspended_anim_strip_18_30
+  - first:
+      213: -5003204665268052159
+    second: trap_suspended_anim_strip_18_31
+  - first:
+      213: -2959593448907846845
+    second: trap_suspended_anim_strip_18_32
+  - first:
+      213: 8040157638960565242
+    second: trap_suspended_anim_strip_18_33
+  - first:
+      213: 5473952734283531472
+    second: trap_suspended_anim_strip_18_34
+  - first:
+      213: 4279887100961464072
+    second: trap_suspended_anim_strip_18_35
+  - first:
+      213: 6789202534499161295
+    second: trap_suspended_anim_strip_18_36
+  - first:
+      213: 2354479308068800660
+    second: trap_suspended_anim_strip_18_37
+  - first:
+      213: 4616661824524668906
+    second: trap_suspended_anim_strip_18_38
+  - first:
+      213: 5901272156477370623
+    second: trap_suspended_anim_strip_18_39
+  - first:
+      213: 4654924044981104794
+    second: trap_suspended_anim_strip_18_40
+  - first:
+      213: -4104480113201304420
+    second: trap_suspended_anim_strip_18_41
+  - first:
+      213: 8446983668308689524
+    second: trap_suspended_anim_strip_18_42
+  - first:
+      213: 8653568790772146912
+    second: trap_suspended_anim_strip_18_43
+  - first:
+      213: -2614077005015534611
+    second: trap_suspended_anim_strip_18_44
+  - first:
+      213: -4599542913386857179
+    second: trap_suspended_anim_strip_18_45
+  - first:
+      213: -8263989706174512992
+    second: trap_suspended_anim_strip_18_46
+  - first:
+      213: 8419242818134397371
+    second: trap_suspended_anim_strip_18_47
+  - first:
+      213: -4927974805820711486
+    second: trap_suspended_anim_strip_18_48
+  - first:
+      213: 3915279694255431335
+    second: trap_suspended_anim_strip_18_49
+  - first:
+      213: 6173214400790476241
+    second: trap_suspended_anim_strip_18_50
+  - first:
+      213: -7862844775978987412
+    second: trap_suspended_anim_strip_18_51
+  - first:
+      213: -1834103816225298681
+    second: trap_suspended_anim_strip_18_52
+  - first:
+      213: -6322351670268858660
+    second: trap_suspended_anim_strip_18_53
+  - first:
+      213: 6819360336212618827
+    second: trap_suspended_anim_strip_18_54
+  - first:
+      213: 6889996734317084143
+    second: trap_suspended_anim_strip_18_55
+  - first:
+      213: -4257256035633954166
+    second: trap_suspended_anim_strip_18_56
+  - first:
+      213: -5405313870867445707
+    second: trap_suspended_anim_strip_18_57
+  - first:
+      213: -7407314013722820631
+    second: trap_suspended_anim_strip_18_58
+  - first:
+      213: -4363397417291926029
+    second: trap_suspended_anim_strip_18_59
+  - first:
+      213: -1747264696846149006
+    second: trap_suspended_anim_strip_18_60
+  - first:
+      213: -8633429093664177007
+    second: trap_suspended_anim_strip_18_61
+  - first:
+      213: 5754639511759364541
+    second: trap_suspended_anim_strip_18_62
+  - first:
+      213: -6933925228105737872
+    second: trap_suspended_anim_strip_18_63
+  - first:
+      213: -6603373302152818195
+    second: trap_suspended_anim_strip_18_64
+  - first:
+      213: 4427973332990414942
+    second: trap_suspended_anim_strip_18_65
+  - first:
+      213: 8987869586520024118
+    second: trap_suspended_anim_strip_18_66
+  - first:
+      213: 8547421552118034315
+    second: trap_suspended_anim_strip_18_67
+  - first:
+      213: 9014756713891030947
+    second: trap_suspended_anim_strip_18_68
+  - first:
+      213: 8923513175125815796
+    second: trap_suspended_anim_strip_18_69
+  - first:
+      213: 7188992469477387666
+    second: trap_suspended_anim_strip_18_70
+  - first:
+      213: -4742770176887495665
+    second: trap_suspended_anim_strip_18_71
+  - first:
+      213: -6553853434043453564
+    second: trap_suspended_anim_strip_18_72
+  - first:
+      213: -5763963397978275931
+    second: trap_suspended_anim_strip_18_73
+  - first:
+      213: 7369548002200101362
+    second: trap_suspended_anim_strip_18_74
+  - first:
+      213: -4741025233399754297
+    second: trap_suspended_anim_strip_18_75
+  - first:
+      213: -566586125193907919
+    second: trap_suspended_anim_strip_18_76
+  - first:
+      213: 1691135040627511128
+    second: trap_suspended_anim_strip_18_77
+  - first:
+      213: -3731929483271052729
+    second: trap_suspended_anim_strip_18_78
+  - first:
+      213: -6172683507228331410
+    second: trap_suspended_anim_strip_18_79
+  - first:
+      213: -1369764380478379301
+    second: trap_suspended_anim_strip_18_80
+  - first:
+      213: 9220363707670510524
+    second: trap_suspended_anim_strip_18_81
+  - first:
+      213: 3305724828004936117
+    second: trap_suspended_anim_strip_18_82
+  - first:
+      213: -1266144098565821530
+    second: trap_suspended_anim_strip_18_83
+  - first:
+      213: 7726397809427299883
+    second: trap_suspended_anim_strip_18_84
+  - first:
+      213: -7702071145471077719
+    second: trap_suspended_anim_strip_18_85
+  - first:
+      213: -2855805610009296258
+    second: trap_suspended_anim_strip_18_86
+  - first:
+      213: 1440048110340853802
+    second: trap_suspended_anim_strip_18_87
+  - first:
+      213: 8886973675963174925
+    second: trap_suspended_anim_strip_18_88
+  - first:
+      213: -1201044729126748706
+    second: trap_suspended_anim_strip_18_89
+  - first:
+      213: 6265085054735974044
+    second: trap_suspended_anim_strip_18_90
+  - first:
+      213: 4519471625348970577
+    second: trap_suspended_anim_strip_18_91
+  - first:
+      213: -4640778915547736873
+    second: trap_suspended_anim_strip_18_92
+  - first:
+      213: -6798821664852925874
+    second: trap_suspended_anim_strip_18_93
+  - first:
+      213: 3615153452190082065
+    second: trap_suspended_anim_strip_18_94
+  - first:
+      213: -61717609718421760
+    second: trap_suspended_anim_strip_18_95
+  - first:
+      213: 4949243395471451505
+    second: trap_suspended_anim_strip_18_96
+  - first:
+      213: 805500080471327253
+    second: trap_suspended_anim_strip_18_97
+  - first:
+      213: 5400195663594268686
+    second: trap_suspended_anim_strip_18_98
+  - first:
+      213: -9149355288730064074
+    second: trap_suspended_anim_strip_18_99
+  - first:
+      213: -8349059585766723453
+    second: trap_suspended_anim_strip_18_100
+  - first:
+      213: -2994886781233051553
+    second: trap_suspended_anim_strip_18_101
+  - first:
+      213: -3567126094658880160
+    second: trap_suspended_anim_strip_18_102
+  - first:
+      213: 3667506361171559340
+    second: trap_suspended_anim_strip_18_103
+  - first:
+      213: -1539113254595236846
+    second: trap_suspended_anim_strip_18_104
+  - first:
+      213: -7927607381753157812
+    second: trap_suspended_anim_strip_18_105
+  - first:
+      213: -3816212964222777116
+    second: trap_suspended_anim_strip_18_106
+  - first:
+      213: 7092652702836489616
+    second: trap_suspended_anim_strip_18_107
+  - first:
+      213: 6033861380245550857
+    second: trap_suspended_anim_strip_18_108
+  - first:
+      213: 9030890749526271313
+    second: trap_suspended_anim_strip_18_109
+  - first:
+      213: -1826831419804196474
+    second: trap_suspended_anim_strip_18_110
+  - first:
+      213: 1648873661620168215
+    second: trap_suspended_anim_strip_18_111
+  - first:
+      213: 703712347387459647
+    second: trap_suspended_anim_strip_18_112
+  - first:
+      213: -1251205570021083466
+    second: trap_suspended_anim_strip_18_113
+  - first:
+      213: -7805233411155593253
+    second: trap_suspended_anim_strip_18_114
+  - first:
+      213: 7737949275787245026
+    second: trap_suspended_anim_strip_18_115
+  - first:
+      213: 1670768003829435203
+    second: trap_suspended_anim_strip_18_116
+  - first:
+      213: 5878949999707709122
+    second: trap_suspended_anim_strip_18_117
+  - first:
+      213: 697674033329446972
+    second: trap_suspended_anim_strip_18_118
+  - first:
+      213: -368724625084667901
+    second: trap_suspended_anim_strip_18_119
+  - first:
+      213: -3244467272369983749
+    second: trap_suspended_anim_strip_18_120
+  - first:
+      213: 7736032365903967502
+    second: trap_suspended_anim_strip_18_121
+  - first:
+      213: 277253398238734846
+    second: trap_suspended_anim_strip_18_122
+  - first:
+      213: -8988324154794062303
+    second: trap_suspended_anim_strip_18_123
+  - first:
+      213: -5419373706757325890
+    second: trap_suspended_anim_strip_18_124
+  - first:
+      213: -8409077822987634542
+    second: trap_suspended_anim_strip_18_125
+  - first:
+      213: 847808303799141479
+    second: trap_suspended_anim_strip_18_126
+  - first:
+      213: -6461217132520466093
+    second: trap_suspended_anim_strip_18_127
+  - first:
+      213: -452545119454619426
+    second: trap_suspended_anim_strip_18_128
+  - first:
+      213: -8205895686115265914
+    second: trap_suspended_anim_strip_18_129
+  - first:
+      213: -6156716729886179776
+    second: trap_suspended_anim_strip_18_130
+  - first:
+      213: 4623339896566467444
+    second: trap_suspended_anim_strip_18_131
+  - first:
+      213: -2412205531683372357
+    second: trap_suspended_anim_strip_18_132
+  - first:
+      213: 3794305974150318896
+    second: trap_suspended_anim_strip_18_133
+  - first:
+      213: 5105745523672236732
+    second: trap_suspended_anim_strip_18_134
+  - first:
+      213: -6672314827650837732
+    second: trap_suspended_anim_strip_18_135
+  - first:
+      213: -8565185730545519664
+    second: trap_suspended_anim_strip_18_136
+  - first:
+      213: -4898531103031142575
+    second: trap_suspended_anim_strip_18_137
+  - first:
+      213: 3100850206539036157
+    second: trap_suspended_anim_strip_18_138
+  - first:
+      213: 6834577657842222988
+    second: trap_suspended_anim_strip_18_139
+  - first:
+      213: -5774079131573224322
+    second: trap_suspended_anim_strip_18_140
+  - first:
+      213: -6569268580676027579
+    second: trap_suspended_anim_strip_18_141
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848209e8ab1202e50800000000000000
+      internalID: 6782458123959412808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcf9ef0470e97d30800000000000000
+      internalID: 4429818497583414520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cc82031bd0bbd70800000000000000
+      internalID: 9059850130054237318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c9b94ce2a301630800000000000000
+      internalID: 3895677650216918021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63aaff2771b25b5c0800000000000000
+      internalID: -4200403697739519434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cedc882e62f04b40800000000000000
+      internalID: 5422600506294722241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0743002ed3100d0800000000000000
+      internalID: -3458414997968490293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb378758fbced9200800000000000000
+      internalID: 188567066741601211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_8
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f71cab21de731520800000000000000
+      internalID: 2671618440806799345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_9
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca96b89f7a51de0e0800000000000000
+      internalID: -2239109628542883412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_10
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d268e336e3845fd0800000000000000
+      internalID: -2354111680471342376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_11
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfe6cc83dd8ebe30800000000000000
+      internalID: 4521207015666020279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_12
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1216ed0e6111c60800000000000000
+      internalID: 7787030385759691179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_13
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a9100a3c70942a0800000000000000
+      internalID: -6752857629480871278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_14
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcff0b7e48699ebd0800000000000000
+      internalID: -2600381812262764595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_15
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65eadc595f9513c50800000000000000
+      internalID: 6643189836663336534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_16
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e113a228744b1b0800000000000000
+      internalID: -5641805808809206225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_suspended_anim_strip_18_17
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c25a933e15a38b80800000000000000
+      internalID: -8393683731355118909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

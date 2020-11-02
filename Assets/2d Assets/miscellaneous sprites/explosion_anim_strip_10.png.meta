@@ -1,0 +1,595 @@
+fileFormatVersion: 2
+guid: 9800525bc7b668142ab13eacb6628036
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3794741136824393815
+    second: explosion_anim_strip_10_0
+  - first:
+      213: -1812644004245757434
+    second: explosion_anim_strip_10_1
+  - first:
+      213: 8582992290833687542
+    second: explosion_anim_strip_10_2
+  - first:
+      213: -133856749009764635
+    second: explosion_anim_strip_10_3
+  - first:
+      213: -7246479247531812022
+    second: explosion_anim_strip_10_4
+  - first:
+      213: -8857902445303239351
+    second: explosion_anim_strip_10_5
+  - first:
+      213: 164194932813563683
+    second: explosion_anim_strip_10_6
+  - first:
+      213: 207275019965553561
+    second: explosion_anim_strip_10_7
+  - first:
+      213: -1604327309140018598
+    second: explosion_anim_strip_10_8
+  - first:
+      213: 1174469044622197487
+    second: explosion_anim_strip_10_9
+  - first:
+      213: -8763636568531595538
+    second: explosion_anim_strip_10_10
+  - first:
+      213: 3975875919844036524
+    second: explosion_anim_strip_10_11
+  - first:
+      213: -2297352930941868037
+    second: explosion_anim_strip_10_12
+  - first:
+      213: -7061045587013711350
+    second: explosion_anim_strip_10_13
+  - first:
+      213: -8365623595683466546
+    second: explosion_anim_strip_10_14
+  - first:
+      213: 1569467553467479381
+    second: explosion_anim_strip_10_15
+  - first:
+      213: 2024654266088255920
+    second: explosion_anim_strip_10_16
+  - first:
+      213: -2246447069499760580
+    second: explosion_anim_strip_10_17
+  - first:
+      213: -6349623032317800718
+    second: explosion_anim_strip_10_18
+  - first:
+      213: 6776854275077838508
+    second: explosion_anim_strip_10_19
+  - first:
+      213: -8242728142111357668
+    second: explosion_anim_strip_10_20
+  - first:
+      213: 7139321202260732228
+    second: explosion_anim_strip_10_21
+  - first:
+      213: -7433270181366260652
+    second: explosion_anim_strip_10_22
+  - first:
+      213: -7719574613869924387
+    second: explosion_anim_strip_10_23
+  - first:
+      213: -3053959503940925625
+    second: explosion_anim_strip_10_24
+  - first:
+      213: 2758361839908000412
+    second: explosion_anim_strip_10_25
+  - first:
+      213: 4595974996128575689
+    second: explosion_anim_strip_10_26
+  - first:
+      213: 7795309876497722767
+    second: explosion_anim_strip_10_27
+  - first:
+      213: -2907936058953002471
+    second: explosion_anim_strip_10_28
+  - first:
+      213: -2225271416722360755
+    second: explosion_anim_strip_10_29
+  - first:
+      213: 2479529210982490410
+    second: explosion_anim_strip_10_30
+  - first:
+      213: -6593171293288640218
+    second: explosion_anim_strip_10_31
+  - first:
+      213: -3386319861004628247
+    second: explosion_anim_strip_10_32
+  - first:
+      213: -3590885630492867455
+    second: explosion_anim_strip_10_33
+  - first:
+      213: -4221048510773028685
+    second: explosion_anim_strip_10_34
+  - first:
+      213: -7556349961543902426
+    second: explosion_anim_strip_10_35
+  - first:
+      213: -689833463818791381
+    second: explosion_anim_strip_10_36
+  - first:
+      213: 2204015195227878066
+    second: explosion_anim_strip_10_37
+  - first:
+      213: -2494714491511649581
+    second: explosion_anim_strip_10_38
+  - first:
+      213: -8823944350607428564
+    second: explosion_anim_strip_10_39
+  - first:
+      213: 1037611693991364434
+    second: explosion_anim_strip_10_40
+  - first:
+      213: 6511713369810589291
+    second: explosion_anim_strip_10_41
+  - first:
+      213: -4064892147105382528
+    second: explosion_anim_strip_10_42
+  - first:
+      213: -8925842704211793979
+    second: explosion_anim_strip_10_43
+  - first:
+      213: -7058923422812142624
+    second: explosion_anim_strip_10_44
+  - first:
+      213: 6026405297329576599
+    second: explosion_anim_strip_10_45
+  - first:
+      213: 6071894143769590057
+    second: explosion_anim_strip_10_46
+  - first:
+      213: -4133353884917720680
+    second: explosion_anim_strip_10_47
+  - first:
+      213: -8019419812789203574
+    second: explosion_anim_strip_10_48
+  - first:
+      213: -2784710364328329802
+    second: explosion_anim_strip_10_49
+  - first:
+      213: 3643028214800927320
+    second: explosion_anim_strip_10_50
+  - first:
+      213: -1231094582786706227
+    second: explosion_anim_strip_10_51
+  - first:
+      213: 6169554259163032775
+    second: explosion_anim_strip_10_52
+  - first:
+      213: 9009230289333091053
+    second: explosion_anim_strip_10_53
+  - first:
+      213: 5857172943466711556
+    second: explosion_anim_strip_10_54
+  - first:
+      213: 4534411999267660981
+    second: explosion_anim_strip_10_55
+  - first:
+      213: 5246083551343526349
+    second: explosion_anim_strip_10_56
+  - first:
+      213: 5976268642328451571
+    second: explosion_anim_strip_10_57
+  - first:
+      213: -2099701806288931721
+    second: explosion_anim_strip_10_58
+  - first:
+      213: 6051003422662014980
+    second: explosion_anim_strip_10_59
+  - first:
+      213: 1991222097851261596
+    second: explosion_anim_strip_10_60
+  - first:
+      213: -4390165726040388070
+    second: explosion_anim_strip_10_61
+  - first:
+      213: -9168577758163878870
+    second: explosion_anim_strip_10_62
+  - first:
+      213: -5479142101025247257
+    second: explosion_anim_strip_10_63
+  - first:
+      213: -3852478620453380947
+    second: explosion_anim_strip_10_64
+  - first:
+      213: 370615583212208720
+    second: explosion_anim_strip_10_65
+  - first:
+      213: -4220547572823662143
+    second: explosion_anim_strip_10_66
+  - first:
+      213: -6753354584573036048
+    second: explosion_anim_strip_10_67
+  - first:
+      213: 2441528697892854601
+    second: explosion_anim_strip_10_68
+  - first:
+      213: -7324762627073878215
+    second: explosion_anim_strip_10_69
+  - first:
+      213: 1514232731533062739
+    second: explosion_anim_strip_10_70
+  - first:
+      213: 360581775189260348
+    second: explosion_anim_strip_10_71
+  - first:
+      213: -892067066479741245
+    second: explosion_anim_strip_10_72
+  - first:
+      213: -6860921138018525087
+    second: explosion_anim_strip_10_73
+  - first:
+      213: -6247581378299705199
+    second: explosion_anim_strip_10_74
+  - first:
+      213: -6664157620691610027
+    second: explosion_anim_strip_10_75
+  - first:
+      213: 6059038602913720149
+    second: explosion_anim_strip_10_76
+  - first:
+      213: 8709687372929094741
+    second: explosion_anim_strip_10_77
+  - first:
+      213: 9075633699345261009
+    second: explosion_anim_strip_10_78
+  - first:
+      213: -7240913953889276109
+    second: explosion_anim_strip_10_79
+  - first:
+      213: -1624936754465984059
+    second: explosion_anim_strip_10_80
+  - first:
+      213: 5163311216506812576
+    second: explosion_anim_strip_10_81
+  - first:
+      213: -5899659881327575387
+    second: explosion_anim_strip_10_82
+  - first:
+      213: -9196956673970388056
+    second: explosion_anim_strip_10_83
+  - first:
+      213: 8733598332841210920
+    second: explosion_anim_strip_10_84
+  - first:
+      213: -5890574388893782700
+    second: explosion_anim_strip_10_85
+  - first:
+      213: 6429775806070416783
+    second: explosion_anim_strip_10_86
+  - first:
+      213: -5183481725219815443
+    second: explosion_anim_strip_10_87
+  - first:
+      213: 2872027557002863683
+    second: explosion_anim_strip_10_88
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750eaf265f0a9a430800000000000000
+      internalID: 3794741136824393815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602a0b6c1e138d6e0800000000000000
+      internalID: -1812644004245757434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3ee0d830aec1770800000000000000
+      internalID: 8582992290833687542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eefb78fef1742ef0800000000000000
+      internalID: -133856749009764635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b50a294855f6b90800000000000000
+      internalID: -7246479247531812022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94de2ac38a8621580800000000000000
+      internalID: -8857902445303239351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3278544eb66574200800000000000000
+      internalID: 164194932813563683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bdbdf488360e200800000000000000
+      internalID: 207275019965553561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a304bffc84cb9e0800000000000000
+      internalID: -1604327309140018598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_anim_strip_10_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2066c9f5d8c4010800000000000000
+      internalID: 1174469044622197487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
