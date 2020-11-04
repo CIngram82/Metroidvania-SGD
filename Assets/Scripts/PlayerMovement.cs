@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement playerMovement;
    [SerializeField] private Rigidbody2D ridg;
     private float speed = 15;
     private bool isOnGround;
     private float jumpForce = 10;
-    private int jumpCount = 0;
+    private int jumpCount = 1;
+    public int jumpsAllowed;
     
     void Start()
     {
+        playerMovement = this;
+        jumpsAllowed = 1;
         ridg = gameObject.GetComponent<Rigidbody2D>();
         isOnGround = true;
     }
@@ -39,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            if (isOnGround && jumpCount <= 1)
+            if (isOnGround && jumpCount <= jumpsAllowed)
             {
                 jumpCount++;
                 Debug.Log("CanJump");
@@ -59,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isOnGround = true;
-            jumpCount = 0;
+            jumpCount = 1;
         }
     }
 }
