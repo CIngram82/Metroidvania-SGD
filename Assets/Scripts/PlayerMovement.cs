@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement playerMovement;
-   [SerializeField] private Rigidbody2D ridg;
-    private float speed = 15;
+    [SerializeField] private Rigidbody2D ridg;
+    [SerializeField] private float speed;
     private bool isOnGround;
-    private float jumpForce = 10;
+    private float jumpForce;
     private int jumpCount = 1;
     public int jumpsAllowed;
+   [SerializeField] private LayerMask groundLayer;
     
     void Start()
     {
@@ -18,52 +19,52 @@ public class PlayerMovement : MonoBehaviour
         jumpsAllowed = 1;
         ridg = gameObject.GetComponent<Rigidbody2D>();
         isOnGround = true;
+        speed = 5;
+        jumpForce = 6f;
     }
 
    
     void Update()
     {
-       
-       CheckJumping();
+        CheckJumping();
     }
 
     private void FixedUpdate()
     {
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-
-        Vector2 movement = new Vector2(moveHorizontal, 0.0f);
-
-        ridg.AddForce(movement * speed);
-
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        ridg.velocity = new Vector2(moveHorizontal * speed, ridg.velocity.y);
     }
 
-    void CheckJumping() // Hoping to change this to raycasting to check for ground as soon as I remember how to do it.
-    {
+    void CheckJumping() 
+    { 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            IsGrounded();
             if (isOnGround && jumpCount <= jumpsAllowed)
             {
                 jumpCount++;
-                Debug.Log("CanJump");
-                ridg.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
             }
             else
             {
                 isOnGround = false;
-
             }
 
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    bool IsGrounded()
     {
-        if (collision.gameObject.tag == "Ground")
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1, groundLayer);
+        Debug.DrawRay(transform.position, Vector2.down * 1, Color.red, 2f);
+        if(hitInfo.collider != null)
         {
             isOnGround = true;
             jumpCount = 1;
+            return true;
         }
+        return false;
     }
+
 }
