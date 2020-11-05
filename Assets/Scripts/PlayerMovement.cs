@@ -5,25 +5,30 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement playerMovement;
-    [SerializeField] private Rigidbody2D ridg;
+    private Rigidbody2D ridg;
+    private SpriteRenderer rend;
+    private Animator anim;
     [SerializeField] private float speed;
     private bool isOnGround;
     private float jumpForce;
     private int jumpCount = 1;
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
+    float yMovement;
+  
     
     void Start()
     {
         playerMovement = this;
         jumpsAllowed = 1;
-        ridg = gameObject.GetComponent<Rigidbody2D>();
+        ridg = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         isOnGround = true;
         speed = 5;
         jumpForce = 6f;
     }
 
-   
     void Update()
     {
         CheckJumping();
@@ -33,6 +38,19 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         ridg.velocity = new Vector2(moveHorizontal * speed, ridg.velocity.y);
+        anim.SetFloat("Move", Mathf.Abs(moveHorizontal));
+        yMovement = ridg.velocity.y;
+        anim.SetFloat("yMovement", yMovement);
+
+        if (moveHorizontal < 0)
+        {
+            rend.flipX = true; 
+        }
+        else if(moveHorizontal > 0)
+        {
+            rend.flipX = false;
+        }
+
     }
 
     void CheckJumping() 
@@ -42,17 +60,22 @@ public class PlayerMovement : MonoBehaviour
             IsGrounded();
             if (isOnGround && jumpCount <= jumpsAllowed)
             {
+                anim.SetFloat("yMovement", yMovement);
+                
                 jumpCount++;
                 ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+               // yMovement = ridg.velocity.y;
+              //  anim.SetFloat("yMovement", yMovement);
             }
             else
             {
                 isOnGround = false;
+
             }
 
         }
+       
     }
-
 
     bool IsGrounded()
     {
@@ -61,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         if(hitInfo.collider != null)
         {
             isOnGround = true;
+            
             jumpCount = 1;
             return true;
         }
