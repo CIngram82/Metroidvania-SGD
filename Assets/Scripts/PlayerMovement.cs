@@ -60,12 +60,13 @@ public class PlayerMovement : MonoBehaviour
             IsGrounded();
             if (isOnGround && jumpCount <= jumpsAllowed)
             {
-                anim.SetFloat("yMovement", yMovement);
-                
+               if(jumpCount == 1)
+                {
+                    //Need to set the anim of before jump to start by velocity y check, then transition to jump up after it is finished for the diration of the jump
+                }
                 jumpCount++;
                 ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
-               // yMovement = ridg.velocity.y;
-              //  anim.SetFloat("yMovement", yMovement);
+               
             }
             else
             {
@@ -73,6 +74,10 @@ public class PlayerMovement : MonoBehaviour
 
             }
 
+        }
+        else if(Input.GetKeyUp(KeyCode.Space))
+        {
+            anim.SetBool("jumpButtonDown", false);
         }
        
     }
