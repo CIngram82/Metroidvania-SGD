@@ -11,14 +11,18 @@ public class EnemyGroundMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
     private Rigidbody2D rb2D;
+    private Animator anim;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
     }
 
     void FixedUpdate()
     {
         rb2D.velocity = new Vector2((transform.localScale.x > 0) ? moveSpeed : -moveSpeed, 0f);
+        anim.SetFloat("speed", moveSpeed);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
