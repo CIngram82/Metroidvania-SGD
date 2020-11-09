@@ -21,6 +21,7 @@ public class EnemyGroundMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         rb2D.velocity = new Vector2((transform.localScale.x > 0) ? moveSpeed : -moveSpeed, 0f);
         anim.SetFloat("speed", moveSpeed);
     }
