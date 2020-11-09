@@ -332,7 +332,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1346669376}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 15ecb0e94efd2bb40b02f3e0a4118982, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1416,13 +1416,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2763210982858626679, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
+      propertyPath: jumpsAllowed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.39
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.z
