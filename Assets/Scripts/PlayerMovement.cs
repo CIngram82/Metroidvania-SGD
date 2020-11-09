@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer rend;
     private Animator anim;
     [SerializeField] private float speed;
-    private bool isOnGround;
-    private float jumpForce;
+    private bool canJump;
+   [SerializeField] private float jumpForce;
     private int jumpCount = 1;
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         ridg = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        isOnGround = true;
+        canJump = true;
         speed = 5;
         jumpForce = 6f;
     }
@@ -54,32 +54,51 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void CheckJumping() 
-    { 
-        if (Input.GetKeyDown(KeyCode.Space))
+    {
+
+        
+        if (Input.GetKey(KeyCode.Space))
         {
             IsGrounded();
-            if (isOnGround && jumpCount <= jumpsAllowed)
+            if (canJump && jumpCount <= jumpsAllowed)
             {
-               if(jumpCount == 1)
-                {
-                    //Need to set the anim of before jump to start by velocity y check, then transition to jump up after it is finished for the diration of the jump
-                }
-                jumpCount++;
-                ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                anim.Play("Before_Jump");
+
+            }
+
+        }
                
+        else if(Input.GetKeyUp(KeyCode.Space))
+        {
+            IsGrounded();
+            if (canJump && jumpCount <= jumpsAllowed)
+            {
+                anim.SetBool("JumpkeyPressed", true);
+                if (jumpCount == 1)
+                {
+                    jumpForce = 6f;
+                    ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                }
+                // jumpCount++;
+                if (jumpCount >= 2)
+                {
+                    jumpForce = 8f;
+                    ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                }
+                // ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                jumpCount++;
             }
             else
             {
-                isOnGround = false;
-
+                canJump = false;
             }
 
         }
-        else if(Input.GetKeyUp(KeyCode.Space))
+        else
         {
-            anim.SetBool("jumpButtonDown", false);
+            anim.SetBool("JumpkeyPressed", false);
         }
-       
+
     }
 
     bool IsGrounded()
@@ -88,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.down * 1, Color.red, 2f);
         if(hitInfo.collider != null)
         {
-            isOnGround = true;
+            canJump = true;
             
             jumpCount = 1;
             return true;

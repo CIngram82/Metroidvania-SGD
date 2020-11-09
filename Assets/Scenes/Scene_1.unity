@@ -175,9 +175,47 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 202135063}
+    m_ColliderPaths:
+    - - X: 90000000
+        Y: 30000000
+      - X: 30000000
+        Y: 30000000
+      - X: 30000000
+        Y: 20000000
+      - X: 90000000
+        Y: 20000000
+    - - X: 150000000
+        Y: 0
+      - X: -60000000
+        Y: 0
+      - X: -60000000
+        Y: -10000000
+      - X: 150000000
+        Y: -10000000
+    - - X: 210000000
+        Y: -40000000
+      - X: -140000000
+        Y: -40000000
+      - X: -140000000
+        Y: -50000000
+      - X: 210000000
+        Y: -50000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 8.99997, y: 2}
+      - {x: 8.99997, y: 3}
+      - {x: 3, y: 2.999971}
+      - {x: 3.0000293, y: 2}
+    - - {x: 14.999971, y: -1}
+      - {x: 14.999971, y: 0}
+      - {x: -6, y: -0.000029300001}
+      - {x: -5.999971, y: -1}
+    - - {x: 20.999971, y: -5}
+      - {x: 20.999971, y: -4}
+      - {x: -14, y: -4.000029}
+      - {x: -13.999971, y: -5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &202135062
@@ -213,7 +251,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -1376,37 +1414,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626679, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626680, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626681, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.09617272
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626681, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Size.y
-      value: 0.80765456
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626681, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.014578998
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626681, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4654249
-      objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3917295
       objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5582509
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2763210982858626683, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1444,9 +1458,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2763210982858626685, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: dfb204d1036132746955525d2939c228, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ba7e66c8957fe4a91b8fe66c6b7000, type: 3}
