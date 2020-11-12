@@ -60,10 +60,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             IsGrounded();
-            if (canJump && jumpCount <= jumpsAllowed)
+            if (IsGrounded())
             {
                 anim.Play("Before_Jump");
-
             }
 
         }
@@ -76,16 +75,17 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("JumpkeyPressed", true);
                 if (jumpCount == 1)
                 {
-                    jumpForce = 6f;
+                    jumpForce = 6.5f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                 }
-                // jumpCount++;
+                
                 if (jumpCount >= 2)
                 {
-                    jumpForce = 8f;
+                    //anim.Play("Double_Jump");
+                    jumpForce = 6.5f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                 }
-                // ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+               
                 jumpCount++;
             }
             else
