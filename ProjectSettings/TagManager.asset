@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - JumpSkill
   - Bomb
+  - Coin
+  - HealthItem
+  - Sword
   layers:
   - Default
   - TransparentFX

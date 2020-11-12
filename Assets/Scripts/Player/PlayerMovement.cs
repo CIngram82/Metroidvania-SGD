@@ -75,15 +75,17 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("JumpkeyPressed", true);
                 if (jumpCount == 1)
                 {
-                    jumpForce = 6.5f;
+                    jumpForce = 8f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                    ridg.gravityScale = 1.5f;
                 }
                 
                 if (jumpCount >= 2)
                 {
-                    //anim.Play("Double_Jump");
-                    jumpForce = 6.5f;
+                    float playerY = ridg.transform.position.y;
+                    jumpForce = 8f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
+                    ridg.gravityScale = 1.5f;
                 }
                
                 jumpCount++;
@@ -108,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         if(hitInfo.collider != null)
         {
             canJump = true;
-            
+            ridg.gravityScale = 1f;
             jumpCount = 1;
             return true;
         }
