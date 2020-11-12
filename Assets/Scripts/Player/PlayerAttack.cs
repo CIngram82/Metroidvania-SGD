@@ -28,8 +28,9 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void finishAttacking()
+    private void SwordHit()
     {
+        Debug.Log("Hit");
         // this will possibly turn off a collider
     }
 
