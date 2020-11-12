@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 2763210982858626679}
   - component: {fileID: 2763210982858626684}
   - component: {fileID: 2763210982858626685}
+  - component: {fileID: 2145964013}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  jumpsAllowed: 0
+  jumpForce: 0
+  jumpsAllowed: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -163,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23762a9c6a0024459a2c406866c0052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinCounter: 0
 --- !u!95 &2763210982858626685
 Animator:
   serializedVersion: 3
@@ -182,3 +185,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2145964013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763210982858626678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd1e336a9d364142b51a4c3ff05705d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSword: 0
