@@ -10,8 +10,11 @@ public class PlayerAttack : MonoBehaviour
    // [SerializeField] private GameObject swordCollider;
 
     public bool hasSword;
+    bool canAttack;
+
     void Start()
     {
+        canAttack = true;
         playerAttack = this;
         hasSword = false;
         anim = GetComponent<Animator>();
@@ -20,11 +23,13 @@ public class PlayerAttack : MonoBehaviour
  
     private void Update()
     {
-        if (hasSword == true && Input.GetMouseButtonUp(0))
+        if (hasSword == true && Input.GetMouseButtonUp(0) && canAttack)
         {
+            canAttack = false;
             anim.Play("Sword_Attack");
-           // swordCollider.SetActive(true);
-            Invoke("finishAttacking", .5f);
+            // swordCollider.SetActive(true);
+            Invoke("AttackCooldown", .5f);
+           
         }
     }
 
@@ -32,6 +37,12 @@ public class PlayerAttack : MonoBehaviour
     {
         Debug.Log("Hit");
         // this will possibly turn off a collider
+        
+    }
+
+    private void AttackCooldown()
+    {
+        canAttack = true;
     }
 
 }
