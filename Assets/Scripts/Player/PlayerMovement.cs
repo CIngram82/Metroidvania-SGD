@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Move", Mathf.Abs(moveHorizontal));
         yMovement = ridg.velocity.y;
         anim.SetFloat("yMovement", yMovement);
+        if(yMovement < 0)
+        {
+            ridg.gravityScale = 2.5f;
+        }
 
         if (moveHorizontal < 0)
         {
@@ -75,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("JumpkeyPressed", true);
                 if (jumpCount == 1)
                 {
-                    jumpForce = 8f;
+                    jumpForce = 8.5f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                     ridg.gravityScale = 1.5f;
                 }
@@ -83,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
                 if (jumpCount >= 2)
                 {
                     float playerY = ridg.transform.position.y;
-                    jumpForce = 8f;
+                    jumpForce = 8.5f;
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                     ridg.gravityScale = 1.5f;
                 }
