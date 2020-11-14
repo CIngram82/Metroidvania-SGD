@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
     float yMovement;
+    
   
     
     void Start()

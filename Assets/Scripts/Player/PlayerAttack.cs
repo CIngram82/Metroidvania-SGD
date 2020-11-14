@@ -5,12 +5,13 @@ using UnityEngine.PlayerLoop;
 
 public class PlayerAttack : MonoBehaviour
 {
+
     public static PlayerAttack playerAttack;
     private Animator anim;
-   // [SerializeField] private GameObject swordCollider;
-
     public bool hasSword;
     bool canAttack;
+    [SerializeField] private LayerMask enemyLayer;
+
 
     void Start()
     {
@@ -25,24 +26,34 @@ public class PlayerAttack : MonoBehaviour
     {
         if (hasSword == true && Input.GetMouseButtonUp(0) && canAttack)
         {
+            CheckingForEnemyCollision();
             canAttack = false;
             anim.Play("Sword_Attack");
-            // swordCollider.SetActive(true);
             Invoke("AttackCooldown", .5f);
-           
         }
     }
 
     private void SwordHit()
     {
-        Debug.Log("Hit");
-        // this will possibly turn off a collider
-        
+        Debug.Log("Hit");  
     }
 
     private void AttackCooldown()
     {
         canAttack = true;
+    }
+
+    void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
+    {
+        Collider2D enemyCollider;
+        enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f,enemyLayer);
+
+        if(enemyCollider!= null)
+        {
+            Debug.Log(enemyCollider.name);
+            enemyCollider.gameObject.SetActive(false);
+        }
+       
     }
 
 }
