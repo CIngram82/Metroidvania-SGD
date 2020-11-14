@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D ridg;
     private SpriteRenderer rend;
     private Animator anim;
-   [SerializeField]  private Animation jumpAnim;
+   
     [SerializeField] private float speed;
     private bool canJump;
    [SerializeField] private float jumpForce;
@@ -16,13 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
     float yMovement;
-    bool isMoving;
+    
     
   
     
     void Start()
     {
-        isMoving = false;
+       
         playerMovement = this;
         jumpsAllowed = 1;
         ridg = GetComponent<Rigidbody2D>();
@@ -112,10 +112,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        else
-        {
-            anim.SetBool("JumpkeyPressed", false);
-        }
+      
 
     }
 

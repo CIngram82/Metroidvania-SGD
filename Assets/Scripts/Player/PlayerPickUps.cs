@@ -5,11 +5,15 @@ using UnityEngine;
 public class PlayerPickUps : MonoBehaviour
 {
 
+    public static PlayerPickUps playerPickups;
     [SerializeField] private int coinCounter;
+    [SerializeField] private int bombCounter;
 
     private void Start()
     {
+        playerPickups = this;
         coinCounter = 0;
+        bombCounter = 0;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +25,10 @@ public class PlayerPickUps : MonoBehaviour
         if(other.gameObject.tag == "Bomb")
         {
             other.gameObject.SetActive(false);
+            bombCounter++;
+            // PlayerBombs.playerBombs.bombCounter = bombCounter;
+            PlayerBombs.playerBombs.hasBomb = true;
+           // PlayerBombs.playerBombs.CanBomb();
         }
         if(other.gameObject.tag == "Coin")
         {
