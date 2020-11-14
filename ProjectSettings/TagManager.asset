@@ -11,6 +11,7 @@ TagManager:
   - HealthItem
   - Sword
   - Enemy
+  - Breakable
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Enemy
   - Ground
   - Player
-  - 
+  - Breakable
   - 
   - 
   - 

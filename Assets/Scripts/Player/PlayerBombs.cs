@@ -34,11 +34,6 @@ public class PlayerBombs : MonoBehaviour
        
     }
 
-    public void BombExploded()
-    {
-        GetComponent<Animator>().SetBool("hasExploded", true);
-       // bombPrefab.SetActive(false);
-
-    }
+   
 
 }

@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public bool hasSword;
     bool canAttack;
     [SerializeField] private LayerMask enemyLayer;
+   
 
 
     void Start()
@@ -46,13 +47,23 @@ public class PlayerAttack : MonoBehaviour
     void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
     {
         Collider2D enemyCollider;
-        enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f,enemyLayer);
+        enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f);
 
         if(enemyCollider!= null)
         {
-            Debug.Log(enemyCollider.name);
-            enemyCollider.gameObject.SetActive(false);
+            if(enemyCollider.tag == ("Enemy"))
+            {
+                Debug.Log(enemyCollider.name);
+                enemyCollider.gameObject.SetActive(false);
+            }
+           else if(enemyCollider.tag == "Breakable")
+           {
+                Debug.Log(enemyCollider.name);
+                enemyCollider.gameObject.SetActive(false);
+           }
         }
+
+        
        
     }
 
