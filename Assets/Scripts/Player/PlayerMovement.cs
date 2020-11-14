@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D ridg;
     private SpriteRenderer rend;
     private Animator anim;
+   [SerializeField]  private Animation jumpAnim;
     [SerializeField] private float speed;
     private bool canJump;
    [SerializeField] private float jumpForce;
@@ -15,11 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
     float yMovement;
+    bool isMoving;
     
   
     
     void Start()
     {
+        isMoving = false;
         playerMovement = this;
         jumpsAllowed = 1;
         ridg = GetComponent<Rigidbody2D>();
@@ -48,13 +51,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (moveHorizontal < 0)
-        {
-            rend.flipX = true; 
+        { 
+            rend.flipX = true;
         }
         else if(moveHorizontal > 0)
         {
             rend.flipX = false;
         }
+       
 
     }
 
@@ -67,8 +71,15 @@ public class PlayerMovement : MonoBehaviour
             IsGrounded();
             if (IsGrounded())
             {
-                anim.Play("Before_Jump");
+                anim.SetBool("IsJumping", true);
             }
+            else
+            {
+                anim.SetBool("IsJumping", false);
+            }
+        
+            
+            
 
         }
                
@@ -77,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             IsGrounded();
             if (canJump && jumpCount <= jumpsAllowed)
             {
-                anim.SetBool("JumpkeyPressed", true);
+                anim.SetBool("IsJumping", false);
                 if (jumpCount == 1)
                 {
                     jumpForce = 8.5f;
@@ -121,5 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
         return false;
     }
+
+  
 
 }
