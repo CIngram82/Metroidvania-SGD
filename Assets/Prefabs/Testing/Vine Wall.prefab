@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3059879720491393220}
   - component: {fileID: 3059879720491393243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,9 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3059879720611699784}
   - component: {fileID: 3059879720611699791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite (1)
-  m_TagString: Untagged
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 3059879720842182628}
   - component: {fileID: 3059879720842182629}
   - component: {fileID: 3059879720842182630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vine Wall
   m_TagString: Breakable
   m_Icon: {fileID: 0}

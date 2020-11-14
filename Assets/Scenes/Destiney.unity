@@ -1711,14 +1711,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom
       objectReference: {fileID: 0}
-    - target: {fileID: 782293118854602678, guid: c1c2a2b341a0de0418e5c6d69b792cfb, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 782293118854602678, guid: c1c2a2b341a0de0418e5c6d69b792cfb, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c2a2b341a0de0418e5c6d69b792cfb, type: 3}
 --- !u!1001 &3246238459555479218

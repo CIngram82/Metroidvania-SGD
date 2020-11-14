@@ -47,20 +47,15 @@ public class PlayerAttack : MonoBehaviour
     void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
     {
         Collider2D enemyCollider;
-        enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f);
+        enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f, enemyLayer);
 
         if(enemyCollider!= null)
         {
-            if(enemyCollider.tag == ("Enemy"))
-            {
-                Debug.Log(enemyCollider.name);
+            
+                Debug.Log(enemyCollider.gameObject.name);
                 enemyCollider.gameObject.SetActive(false);
-            }
-           else if(enemyCollider.tag == "Breakable")
-           {
-                Debug.Log(enemyCollider.name);
-                enemyCollider.gameObject.SetActive(false);
-           }
+            
+           
         }
 
         
