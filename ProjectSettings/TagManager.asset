@@ -24,8 +24,8 @@ TagManager:
   - Enemy
   - Ground
   - Player
-  - Breakable
-  - 
+  - BombLayer
+  - CutLayer
   - 
   - 
   - 

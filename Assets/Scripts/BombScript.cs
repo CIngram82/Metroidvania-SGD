@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BombScript : MonoBehaviour
 {
-
-    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask bombLayer;
     public void BombExploded()
     {
-        Collider2D explodedCollider;
-        explodedCollider = Physics2D.OverlapCircle(transform.position, 1.5f, enemyLayer);
+      
+        Collider2D bombWallCollider;
+        bombWallCollider = Physics2D.OverlapCircle(transform.position, 1.5f, bombLayer);
 
-        if (explodedCollider != null)
+        if (bombWallCollider != null)
         {
-            Debug.Log(explodedCollider.name);
-            explodedCollider.gameObject.SetActive(false);
+             Debug.Log(bombWallCollider.name);
+              bombWallCollider.gameObject.SetActive(false);
         }
         GetComponent<Animator>().SetBool("hasExploded", true);
         gameObject.SetActive(false);
