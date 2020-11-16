@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthSystemHearts : IHealthSystem
 {
-    public const int MAX_FRAGMENT_AMOUNT = 2;
+    public const int MAX_FRAGMENT_AMOUNT = 2;   //Maybe make
 
     public event EventHandler OnDamage;
     public event EventHandler OnHeal;
@@ -17,10 +17,15 @@ public class HealthSystemHearts : IHealthSystem
     List<Heart> heartsList;
 
 
-    public HealthSystemHearts(float heartAmount)
+    /// <summary>
+    /// Initilizes health system.
+    /// </summary>
+    /// <param name="amount">Total amount of starting health.</param>
+    public HealthSystemHearts(int amount)
     {
-        MaxHealth = heartAmount * MAX_FRAGMENT_AMOUNT;
+        MaxHealth = amount;
         Health = MaxHealth;
+        int heartAmount = (amount / MAX_FRAGMENT_AMOUNT);
 
         heartsList = new List<Heart>();
         for (int i = 0; i < heartAmount; i++)
@@ -37,7 +42,12 @@ public class HealthSystemHearts : IHealthSystem
 
     public void Damage(float amount)
     {
+        if (Health <= 0)
+            return;
+
+        Health -= amount;
         int damageAmount = Mathf.RoundToInt(amount);
+
         for (int i = heartsList.Count - 1; i >= 0; i--)
         {
             Heart heart = heartsList[i];
@@ -64,6 +74,10 @@ public class HealthSystemHearts : IHealthSystem
 
     public void Heal(float amount)
     {
+        if (Health >= MaxHealth)
+            return;
+
+        Health += amount;
         int healAmount = Mathf.RoundToInt(amount);
 
         for (int i = 0; i < heartsList.Count; i++)
@@ -87,7 +101,10 @@ public class HealthSystemHearts : IHealthSystem
 
     public void AddHeart(float amount)
     {
+        MaxHealth += amount * MAX_FRAGMENT_AMOUNT;
+        Health += amount * MAX_FRAGMENT_AMOUNT;
         int heartAmount = Mathf.RoundToInt(amount);
+
         for (int i = 0; i < heartAmount; i++)
         {
             Heart heart = new Heart(MAX_FRAGMENT_AMOUNT);
@@ -99,7 +116,10 @@ public class HealthSystemHearts : IHealthSystem
 
     public void RemoveHeart(float amount)
     {
+        MaxHealth -= amount * MAX_FRAGMENT_AMOUNT;
+        Health -= amount * MAX_FRAGMENT_AMOUNT;
         int heartAmount = Mathf.RoundToInt(amount);
+
         heartsList.RemoveRange(heartsList.Count - (heartAmount), heartAmount);
 
         OnRemoveHeart?.Invoke(this, EventArgs.Empty);
@@ -109,6 +129,7 @@ public class HealthSystemHearts : IHealthSystem
     {
         return heartsList[0].Fragments == 0;
     }
+
 
 
     /*Class For Heart*/
@@ -146,3 +167,8 @@ public class HealthSystemHearts : IHealthSystem
         }
     }
 }
+
+
+
+
+

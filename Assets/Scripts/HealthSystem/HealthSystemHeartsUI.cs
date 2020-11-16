@@ -76,7 +76,6 @@ public class HealthSystemHeartsUI : MonoBehaviour
             CreateHeartImage().SetHeartFragments(heart.Fragments);
         }
     }
-
     void RemoveHeartImages()
     {
         List<HealthSystemHearts.Heart> heartsList = healthSystem.GetHeartsList();
@@ -208,3 +207,8 @@ public class HealthSystemHeartsUI : MonoBehaviour
         }
     }
 }
+
+
+
+
+

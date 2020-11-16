@@ -13,3 +13,8 @@ public interface IHealthSystem
     void Damage(float amount);
     bool IsDead();
 }
+
+
+
+
+
