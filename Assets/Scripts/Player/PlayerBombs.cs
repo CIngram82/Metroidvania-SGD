@@ -18,19 +18,15 @@ public class PlayerBombs : MonoBehaviour
 
  
     void Update()
-    { 
-        
-            if (Input.GetKeyDown(KeyCode.J) && hasBomb)
-            {
-                Instantiate(bombPrefab, transform.position + (transform.forward), transform.rotation);
-                Debug.Log("canPlace");
-                hasBomb = false;
+    {
 
-            }
+        if (Input.GetKeyDown(KeyCode.J) && hasBomb)
+        {
+            Instantiate(bombPrefab, transform.position + (transform.forward), transform.rotation);
+            Debug.Log("canPlace");
+            hasBomb = false;
 
-
-           
-        
+        }
        
     }
 

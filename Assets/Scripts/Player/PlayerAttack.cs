@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public bool hasSword;
     bool canAttack;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask cutLayer;
    
 
 
@@ -28,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
         if (hasSword == true && Input.GetMouseButtonUp(0) && canAttack)
         {
             CheckingForEnemyCollision();
+            CheckForVineCollisions();
             canAttack = false;
             anim.Play("Sword_Attack");
             Invoke("AttackCooldown", .5f);
@@ -49,17 +51,25 @@ public class PlayerAttack : MonoBehaviour
         Collider2D enemyCollider;
         enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f, enemyLayer);
 
-        if(enemyCollider!= null)
+        if (enemyCollider!= null)
         {
+            Debug.Log(enemyCollider.gameObject.name);
+            enemyCollider.gameObject.SetActive(false);
             
-                Debug.Log(enemyCollider.gameObject.name);
-                enemyCollider.gameObject.SetActive(false);
-            
-           
         }
+     
+    }
 
-        
-       
+    void CheckForVineCollisions()
+    {
+        Collider2D VineWallCollider;
+        VineWallCollider = Physics2D.OverlapCircle(transform.position, 1.5f, cutLayer);
+        if (VineWallCollider != null)
+        {
+            Debug.Log(VineWallCollider.gameObject.name);
+            VineWallCollider.gameObject.SetActive(false);
+
+        }
     }
 
 }

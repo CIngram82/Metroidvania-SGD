@@ -7,6 +7,7 @@ public class GrassWall : MonoBehaviour
 
     public void Hit()
     {
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        Debug.Log("Hit");
     }
 }
