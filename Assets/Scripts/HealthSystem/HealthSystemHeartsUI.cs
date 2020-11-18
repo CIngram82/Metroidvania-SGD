@@ -16,7 +16,7 @@ public class HealthSystemHeartsUI : MonoBehaviour
     List<HeartImage> heartImageList;
     float currentHealth;
     int maxFragments;
-    bool debugging = false;
+    bool debugging = true;
 
 
     void DebugInEditor()

@@ -1,49 +1,49 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿/* Refactor to making more abstract:
+ */
+
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioController : MonoBehaviour
 {
 #pragma warning disable 0649
     [Header("Audio Mixers")]
-    [SerializeField] AudioMixerGroup masterMixerGroup;
-    [SerializeField] AudioMixerGroup effectsMixerGroup;
-    [SerializeField] AudioMixerGroup musicMixerGroup;
-    [Header("Sliders")]
-    [SerializeField] Slider masterSlider;
-    [SerializeField] Slider effectsSlider;
-    [SerializeField] Slider musicSlider;
+    [SerializeField] List<AudioMixerHolder> audioMixerGroups;
 #pragma warning restore 0649
 
+    public List<AudioMixerHolder> AudioMixerGroups { get { return audioMixerGroups; } }
 
-    public void SetMasterVolume(float volume)
+    public void SetMixerVolume(int index, float volume)
     {
-        masterMixerGroup.audioMixer.SetFloat("MasterVolume", volume);
-    }
-    public void SetEffectVolume(float volume)
-    {
-        effectsMixerGroup.audioMixer.SetFloat("EffectVolume", volume);
-    }
-    public void SetMusicVolume(float volume)
-    {
-        musicMixerGroup.audioMixer.SetFloat("MusicVolume", volume);
-    }
-
-    void Start()
-    {
-        float volume;
-
-        masterMixerGroup.audioMixer.GetFloat("MasterVolume", out volume);
-        masterSlider.value = volume;
-
-        effectsMixerGroup.audioMixer.GetFloat("EffectVolume", out volume);
-        effectsSlider.value = volume;
-
-        musicMixerGroup.audioMixer.GetFloat("MusicVolume", out volume);
-        musicSlider.value = volume;
+        audioMixerGroups[index].Volume = volume;
     }
 }
 
+[System.Serializable]
+public class AudioMixerHolder
+{
+    [SerializeField] AudioMixerGroup mixerGroup;
+
+    public string Name { get { return mixerGroup.name; } }
+    public float Volume
+    {
+        get
+        {
+            mixerGroup.audioMixer.GetFloat(Name + "Volume", out float volume);
+            return volume;
+        }
+        set
+        {
+            mixerGroup.audioMixer.SetFloat(Name + "Volume", LogScale(value));
+        }
+    }
+
+    float LogScale(float value)
+    {
+        return Mathf.Log10(value) * 20;
+    }
+}
 
 
 
