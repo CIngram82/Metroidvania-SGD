@@ -12,6 +12,7 @@ TagManager:
   - Sword
   - Enemy
   - Breakable
+  - Boss
   layers:
   - Default
   - TransparentFX

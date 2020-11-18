@@ -51,13 +51,17 @@ public class PlayerAttack : MonoBehaviour
         Collider2D enemyCollider;
         enemyCollider = Physics2D.OverlapCircle(transform.position, 1.5f, enemyLayer);
 
-        if (enemyCollider!= null)
+        if(enemyCollider!= null && enemyCollider.tag == "Boss")
+        {
+            GoblinBomber.goblinBomber.TakeGoblinDamage();
+        }
+        else if (enemyCollider!= null)
         {
             Debug.Log(enemyCollider.gameObject.name);
             enemyCollider.gameObject.SetActive(false);
-            
         }
-     
+      
+
     }
 
     void CheckForVineCollisions()
@@ -68,9 +72,10 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log(VineWallCollider.gameObject.name);
             VineWallCollider.gameObject.SetActive(false);
-
         }
     }
+
+   
 
 }
   
