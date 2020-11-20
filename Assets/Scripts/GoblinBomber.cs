@@ -12,6 +12,10 @@ public class GoblinBomber : MonoBehaviour
     private GameObject thisObject;
     private float distance;
     private bool isFinding;
+    [SerializeField] GameObject bombPrefab;
+    
+   [SerializeField] GameObject thrownBomb;
+    bool readyBomb;
 
 
 
@@ -23,6 +27,7 @@ public class GoblinBomber : MonoBehaviour
         playerobj = GameObject.Find("Player");  
         isFinding = true;
         StartCoroutine(FindplayerLocation());
+        readyBomb = true;
     }
 
    public void TakeGoblinDamage()
@@ -48,13 +53,14 @@ public class GoblinBomber : MonoBehaviour
 
             distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);  
             
-            if (distance < 2)
+            if(distance < 7 && readyBomb)
             {
-                Debug.Log("In Range to close attack");
-            }
-            else if(distance < 5)
-            {
-                Debug.Log("In Range To Bomb");
+                readyBomb = false;
+                anim.SetFloat("Distance", distance);
+                Vector2 bombPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.2f);
+                thrownBomb = Instantiate(bombPrefab, bombPosition, Quaternion.identity);
+                thrownBomb.GetComponent<Rigidbody2D>().AddRelativeForce(transform.forward * 10.0f, ForceMode2D.Impulse);
+                Invoke("AllowBomb", 1.5f);
             }
             yield return null;
 
@@ -62,5 +68,10 @@ public class GoblinBomber : MonoBehaviour
         yield return new WaitForSeconds(1);
     }
 
+    void AllowBomb()
+    {
+        readyBomb = true;
+    }
 
 }
+
