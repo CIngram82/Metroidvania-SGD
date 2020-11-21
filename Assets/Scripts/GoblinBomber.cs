@@ -34,12 +34,12 @@ public class GoblinBomber : MonoBehaviour
    {
 
         health--;
-        anim.SetBool("IsHit", true);
+        anim.Play("Bomber_Goblin_Hit");
         
         if(health == 0)
         {
             isFinding = false; 
-            anim.SetBool("IsDead", false);
+            anim.SetBool("IsDead", true);
             gameObject.SetActive(false);
         }
    }
@@ -51,15 +51,16 @@ public class GoblinBomber : MonoBehaviour
         while (isFinding) 
         {
 
-            distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);  
-            
-            if(distance < 7 && readyBomb)
+            distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);
+            anim.SetFloat("Distance", distance);
+            if (distance < 7 && readyBomb)
             {
                 readyBomb = false;
                 anim.SetFloat("Distance", distance);
                 Vector2 bombPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.2f);
                 thrownBomb = Instantiate(bombPrefab, bombPosition, Quaternion.identity);
-                thrownBomb.GetComponent<Rigidbody2D>().AddRelativeForce(transform.forward * 10.0f, ForceMode2D.Impulse);
+                Rigidbody2D bombRig = thrownBomb.GetComponent<Rigidbody2D>();
+                bombRig.AddRelativeForce(-transform.right * distance, ForceMode2D.Impulse);
                 Invoke("AllowBomb", 1.5f);
             }
             yield return null;

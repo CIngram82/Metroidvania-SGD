@@ -100,3 +100,10 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.5
+    functionName: BombCanHitPlayer
+    data: 
+    objectReferenceParameter: {fileID: 230740522016236889, guid: d631a6f09c366814489a6028b4c59422, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
