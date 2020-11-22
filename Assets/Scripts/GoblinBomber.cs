@@ -61,7 +61,8 @@ public class GoblinBomber : MonoBehaviour
                 thrownBomb = Instantiate(bombPrefab, bombPosition, Quaternion.identity);
                 Rigidbody2D bombRig = thrownBomb.GetComponent<Rigidbody2D>();
                 bombRig.AddRelativeForce(-transform.right * distance, ForceMode2D.Impulse);
-                Invoke("AllowBomb", 1.5f);
+                float bombTime = Random.Range(1, 3);
+                Invoke("AllowBomb", bombTime);
             }
             yield return null;
 
