@@ -32,13 +32,13 @@ public class Sound
 
     public void SetAudioSource(AudioSource audioSource)
     {
-        AudioSource = audioSource;
         audioSource.clip = clip;
         audioSource.volume = volume;
         audioSource.pitch = pitch;
         audioSource.playOnAwake = playOnAwake;
         audioSource.priority = priority;
         audioSource.loop = loop;
+        AudioSource = audioSource;
     }
 
     public void Play()

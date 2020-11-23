@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7787145566111843075}
   - component: {fileID: 7787145566111843072}
   - component: {fileID: 7787145566111843074}
+  - component: {fileID: 1526990811}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7787145566111843133}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46,10 +47,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7787145566405140359}
-  effectsMixerGroup: {fileID: -6537744126739942650, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
+  sfxMixerGroup: {fileID: -6537744126739942650, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
   musicMixerGroup: {fileID: 2495850930059481491, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
-  effects: []
-  music: []
+  sfx:
+  - name: bomb_0
+    clip: {fileID: 8300000, guid: b018765d6d79f0843a32c6e75adf78a7, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: bomb_1
+    clip: {fileID: 8300000, guid: 2392cc45f1fe2544999762f1ae0d601f, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: bomb_2
+    clip: {fileID: 8300000, guid: d126832e764ed06468d839704184de6d, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: sword_0
+    clip: {fileID: 8300000, guid: 9a21d4d6e971cea47a9b9e65dbb99c82, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: sword_1
+    clip: {fileID: 8300000, guid: aeab411cdbb1d444c9ed54c85b338949, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: sword_2
+    clip: {fileID: 8300000, guid: 1815e9039653ce74ea5cf349d259303f, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  - name: leaves_0
+    clip: {fileID: 8300000, guid: 70182d16826556d4ea7a44aa3d110f5e, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 0
+    loop: 0
+  music:
+  - name: Music
+    clip: {fileID: 8300000, guid: 442c885c2e42f0443a196ad847845509, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0.1
+    pitchVariance: 0
+    priority: 0
+    playOnAwake: 1
+    loop: 1
 --- !u!114 &7787145566111843074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,12 +135,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cb56e7d62b7e344acc34a229c22f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterMixerGroup: {fileID: 24300002, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
-  effectsMixerGroup: {fileID: -6537744126739942650, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
-  musicMixerGroup: {fileID: 2495850930059481491, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
-  masterSlider: {fileID: 0}
-  effectsSlider: {fileID: 0}
-  musicSlider: {fileID: 0}
+  audioMixerGroups:
+  - mixerGroup: {fileID: 24300002, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
+  - mixerGroup: {fileID: 2495850930059481491, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
+  - mixerGroup: {fileID: -6537744126739942650, guid: e75627e5f9351f24a91ae6bdc9f0b813, type: 2}
+--- !u!114 &1526990811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787145566111843133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d119d2d5ab85e409b16576f3b69735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7787145566405140359
 GameObject:
   m_ObjectHideFlags: 0

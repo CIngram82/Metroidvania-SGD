@@ -8,10 +8,13 @@ public class PlayerAttack : MonoBehaviour
 
     public static PlayerAttack playerAttack;
     private Animator anim;
+
+
     public bool hasSword;
     bool canAttack;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask cutLayer;
+    AudioManager audioManager;
    
 
 
@@ -21,9 +24,10 @@ public class PlayerAttack : MonoBehaviour
         playerAttack = this;
         hasSword = false;
         anim = GetComponent<Animator>();
+        audioManager = AudioManager.AM;
     }
 
- 
+
     private void Update()
     {
         if (hasSword == true && Input.GetMouseButtonUp(0) && canAttack)
@@ -32,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
             CheckForVineCollisions();
             canAttack = false;
             anim.Play("Sword_Attack");
+            audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
             Invoke("AttackCooldown", .5f);
         }
     }
@@ -71,6 +76,7 @@ public class PlayerAttack : MonoBehaviour
         if (VineWallCollider != null)
         {
             Debug.Log(VineWallCollider.gameObject.name);
+            audioManager.Play(audioManager.GetSFX(), "leaves_");
             VineWallCollider.gameObject.SetActive(false);
         }
     }
