@@ -30,13 +30,14 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (hasSword == true && Input.GetMouseButtonUp(0) && canAttack)
+        if (hasSword == true && Input.GetKeyDown(KeyCode.F) && canAttack)
         {
             CheckingForEnemyCollision();
             CheckForVineCollisions();
             canAttack = false;
             anim.Play("Sword_Attack");
             audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
+            anim.SetBool("CanAttack", canAttack);
             Invoke("AttackCooldown", .5f);
         }
     }
@@ -49,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
     private void AttackCooldown()
     {
         canAttack = true;
+        anim.SetBool("CanAttack", canAttack);
     }
 
     void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
