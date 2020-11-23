@@ -9,15 +9,15 @@ public class UIController : MonoBehaviour
 	}
 	public void OnHelp()
 	{
-		SceneManager.LoadScene("HelpScene");
+		SceneManager.LoadScene("Scene_Help");
 	}
     public void OnCredits()
     {
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("Scene_Credits");
     }
-    public virtual void OnMenu()
+    public void OnMenu()
 	{
-		SceneManager.LoadScene("MainMenuScene");
+		SceneManager.LoadScene("Scene_MainMenu");
 	}
     public void OnReset()
     {

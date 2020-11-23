@@ -18,6 +18,11 @@ public class AudioController : MonoBehaviour
     {
         audioMixerGroups[index].Volume = volume;
     }
+
+    void Start()
+    {
+        AudioManager.AM.Play(AudioManager.AM.GetMusic(), "music_");
+    }
 }
 
 [System.Serializable]

@@ -76,12 +76,14 @@ public class AudioManager : MonoBehaviour
         }
         AM = this;
         DontDestroyOnLoad(gameObject);
+
+        LoadAudioSource(music, musicMixerGroup);
+        LoadAudioSource(sfx, sfxMixerGroup);
     }
 
     void Start()
     {
-        LoadAudioSource(music, musicMixerGroup);
-        LoadAudioSource(sfx, sfxMixerGroup);
+
     }
 }
 
