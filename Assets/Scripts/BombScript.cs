@@ -6,6 +6,12 @@ public class BombScript : MonoBehaviour
 {
     [SerializeField] private LayerMask bombLayer;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private GameObject player ;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     public void BombExploded()
     {
       
@@ -30,6 +36,7 @@ public class BombScript : MonoBehaviour
         if (playerCollider != null)
         {
             Debug.Log("Do Damage to the Player");
+            player.GetComponent<Player>().Damage(1);
         }
         GetComponent<Animator>().SetBool("hasExploded", true);
     }

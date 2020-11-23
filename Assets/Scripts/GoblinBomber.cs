@@ -75,5 +75,7 @@ public class GoblinBomber : MonoBehaviour
         readyBomb = true;
     }
 
+  
+
 }
 
