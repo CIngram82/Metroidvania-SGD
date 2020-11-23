@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerBombs : MonoBehaviour
 {
-
     public static PlayerBombs playerBombs;
     public bool hasBomb;
     // public int bombCounter;
     [SerializeField] GameObject bombPrefab;
-    
+    AudioManager audioManager;
+
+
     void Start()
     {
         playerBombs = this;
         hasBomb = false;
+        audioManager = AudioManager.AM;
     }
 
  
@@ -25,7 +27,7 @@ public class PlayerBombs : MonoBehaviour
             Instantiate(bombPrefab, transform.position + (transform.forward), transform.rotation);
             Debug.Log("canPlace");
             hasBomb = false;
-
+            audioManager.Play(audioManager.GetSFX(), "bomb_", Random.Range(0,3));
         }
        
     }

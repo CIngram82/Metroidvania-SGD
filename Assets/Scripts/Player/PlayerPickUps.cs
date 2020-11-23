@@ -8,6 +8,7 @@ public class PlayerPickUps : MonoBehaviour
     public static PlayerPickUps playerPickups;
     [SerializeField] private int coinCounter;
     [SerializeField] private int bombCounter;
+    
 
     private void Start()
     {
@@ -26,9 +27,8 @@ public class PlayerPickUps : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             bombCounter++;
-            // PlayerBombs.playerBombs.bombCounter = bombCounter;
             PlayerBombs.playerBombs.hasBomb = true;
-           // PlayerBombs.playerBombs.CanBomb();
+           
         }
         if(other.gameObject.tag == "Coin")
         {
@@ -45,6 +45,7 @@ public class PlayerPickUps : MonoBehaviour
         if(other.gameObject.tag == "HealthItem")
         {
             Debug.Log("Grabbed Health Item");
+            gameObject.GetComponent<Player>().Heal(1);
             other.gameObject.SetActive(false);
         }
     }

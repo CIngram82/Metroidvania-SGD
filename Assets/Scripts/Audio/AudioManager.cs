@@ -43,8 +43,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string sound, Sound[] sounds)
+    public void Play(Sound[] sounds, string sound, int num = 0)
     {
+        sound += num;
         Sound s = Array.Find(sounds, item => item.Name == sound);
         if (s == null)
         {
@@ -69,14 +70,12 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        /*/
-		if (AM != null)
-		{
-			Destroy(gameObject);
-		}
-			AM = this;
-			DontDestroyOnLoad(gameObject);
-		/**/
+        if (AM != null)
+        {
+            Destroy(gameObject);
+        }
+        AM = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
