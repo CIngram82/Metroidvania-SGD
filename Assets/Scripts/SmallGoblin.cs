@@ -12,28 +12,37 @@ public class SmallGoblin : MonoBehaviour
     private SpriteRenderer rend;
     bool chasing;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] private LayerMask playerLayer;
     Vector2 direction;
+   [SerializeField] float distance;
+    bool isFinding;
+    private GameObject playerobj;
+    bool isattacking;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        playerobj = GameObject.Find("Player");
+        isFinding = true;
+        isattacking = false;
         movement = 1;
         chasing = false;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         direction = transform.right;
+       
     }
 
-    // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
-        if (!chasing)
+        distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);
+        CheckingDistance();
+
+        if (chasing)
         {
-            IsBlocked();
-            rig.velocity = new Vector2(movement * speed, rig.velocity.y);
-            anim.SetFloat("speed", speed);
+            rig.velocity = new Vector2(distance * movement, rig.velocity.y); 
         }
 
         if (movement < 0)
@@ -44,6 +53,19 @@ public class SmallGoblin : MonoBehaviour
         {
             rend.flipX = false;
         }
+     
+    }
+    private void FixedUpdate()
+    {
+        
+        if (!chasing)
+        {
+            IsBlocked();
+            rig.velocity = new Vector2(movement * speed, rig.velocity.y);
+            anim.SetFloat("speed", speed);
+        }
+       
+   
     }
 
 
@@ -70,4 +92,40 @@ public class SmallGoblin : MonoBehaviour
         }
         return false;
     }
+
+    void CheckingDistance()
+    {
+        if (distance <= 1)
+        {
+            Attacking();
+        }
+       else if (distance >= 3)
+        {
+            chasing = false;
+            isattacking = false;
+        }
+        else if (distance < 3)
+        {
+            chasing = true;
+            isattacking = true;
+
+        }
+       
+    }
+   
+
+    public void Attacking()
+    {
+        
+        Collider2D playerCollider;
+        playerCollider = Physics2D.OverlapCircle(transform.position, 1.5f, playerLayer);
+
+        if (playerCollider != null)
+        {
+            Debug.Log("Do Damage to the Player");
+            
+        }
+        
+    }
+
 }

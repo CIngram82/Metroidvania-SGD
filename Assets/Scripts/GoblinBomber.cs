@@ -9,7 +9,6 @@ public class GoblinBomber : MonoBehaviour
     private int health;
     [SerializeField] private Animator anim;
     private GameObject playerobj;
-    private GameObject thisObject;
     private float distance;
     private bool isFinding;
     [SerializeField] GameObject bombPrefab;
