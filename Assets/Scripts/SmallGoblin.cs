@@ -17,7 +17,7 @@ public class SmallGoblin : MonoBehaviour
    [SerializeField] float distance;
     bool isFinding;
     private GameObject playerobj;
-    bool isattacking;
+    bool canAttack;
 
 
     // Start is called before the first frame update
@@ -25,25 +25,21 @@ public class SmallGoblin : MonoBehaviour
     {
         playerobj = GameObject.Find("Player");
         isFinding = true;
-        isattacking = false;
+        canAttack = true;
         movement = 1;
         chasing = false;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         direction = transform.right;
-       
+        StartCoroutine(FindplayerLocation());
+
     }
 
     private void Update()
     {
         distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);
         CheckingDistance();
-
-        if (chasing)
-        {
-            rig.velocity = new Vector2(distance * movement, rig.velocity.y); 
-        }
 
         if (movement < 0)
         {
@@ -65,7 +61,6 @@ public class SmallGoblin : MonoBehaviour
             anim.SetFloat("speed", speed);
         }
        
-   
     }
 
 
@@ -95,37 +90,51 @@ public class SmallGoblin : MonoBehaviour
 
     void CheckingDistance()
     {
-        if (distance <= 1)
-        {
-            Attacking();
-        }
-       else if (distance >= 3)
-        {
+      
+       if (distance >= 3)
+       {
             chasing = false;
-            isattacking = false;
-        }
+       }
         else if (distance < 3)
         {
             chasing = true;
-            isattacking = true;
-
+            rig.velocity = new Vector2(distance * movement, rig.velocity.y);
         }
        
     }
-   
+
+
+    IEnumerator FindplayerLocation()
+    {
+
+        while (isFinding)
+        {
+
+           
+            if (distance < 1 && canAttack)
+            {
+                canAttack = false;
+                Collider2D playerCollider;
+                playerCollider = Physics2D.OverlapCircle(transform.position, 1.5f, playerLayer);
+
+                if (playerCollider != null)
+                {
+                    Debug.Log("Do Damage to the Player");
+                    playerobj.GetComponent<Player>().Damage(1);
+                }
+                Invoke("Attacking", 2);
+            }
+            yield return null;
+
+        }
+        yield return new WaitForSeconds(1);
+    }
 
     public void Attacking()
     {
-        
-        Collider2D playerCollider;
-        playerCollider = Physics2D.OverlapCircle(transform.position, 1.5f, playerLayer);
 
-        if (playerCollider != null)
-        {
-            Debug.Log("Do Damage to the Player");
-            
-        }
-        
+        canAttack = true;
+
     }
 
 }
