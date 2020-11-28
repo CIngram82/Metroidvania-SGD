@@ -169,3 +169,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  distance: 0

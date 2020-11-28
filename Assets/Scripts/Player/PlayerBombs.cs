@@ -27,11 +27,15 @@ public class PlayerBombs : MonoBehaviour
             Instantiate(bombPrefab, transform.position + (transform.forward), transform.rotation);
             Debug.Log("canPlace");
             hasBomb = false;
-            audioManager.Play(audioManager.GetSFX(), "bomb_", Random.Range(0,3));
+           // audioManager.Play(audioManager.GetSFX(), "bomb_", Random.Range(0,3));
+            Invoke("ReloadBomb", 2);
         }
        
     }
 
-   
+   void ReloadBomb()
+    {
+        hasBomb = true;
+    }
 
 }

@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
             CheckForVineCollisions();
             canAttack = false;
             anim.Play("Sword_Attack");
-            audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
+           // audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
             anim.SetBool("CanAttack", canAttack);
             Invoke("AttackCooldown", .5f);
         }
@@ -78,7 +78,7 @@ public class PlayerAttack : MonoBehaviour
         if (VineWallCollider != null)
         {
             Debug.Log(VineWallCollider.gameObject.name);
-            audioManager.Play(audioManager.GetSFX(), "leaves_");
+           // audioManager.Play(audioManager.GetSFX(), "leaves_");
             VineWallCollider.gameObject.SetActive(false);
         }
     }
