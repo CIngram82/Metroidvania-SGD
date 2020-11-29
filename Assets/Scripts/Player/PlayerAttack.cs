@@ -62,13 +62,16 @@ public class PlayerAttack : MonoBehaviour
         {
             GoblinBomber.goblinBomber.TakeGoblinDamage();
         }
+        else if (enemyCollider != null && enemyCollider.tag == "SmallGoblin")
+        {
+            SmallGoblin.smallGoblin.TakeSmallGoblinDamage();
+        }
         else if (enemyCollider!= null)
         {
             Debug.Log(enemyCollider.gameObject.name);
             enemyCollider.gameObject.SetActive(false);
         }
       
-
     }
 
     void CheckForVineCollisions()

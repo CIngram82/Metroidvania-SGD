@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 424975361854358375}
   - component: {fileID: 424975361854358374}
   - component: {fileID: 424975361854358368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smallGoblin
-  m_TagString: Untagged
+  m_TagString: SmallGoblin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &424975361854358374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,5 +171,5 @@ MonoBehaviour:
     m_Bits: 512
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   distance: 0
