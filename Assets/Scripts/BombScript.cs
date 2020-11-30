@@ -7,10 +7,12 @@ public class BombScript : MonoBehaviour
     [SerializeField] private LayerMask bombLayer;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private GameObject player ;
+    AudioManager audioManager;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        audioManager = AudioManager.AM;
     }
     public void BombExploded()
     {
@@ -23,6 +25,7 @@ public class BombScript : MonoBehaviour
         {
               bombWallCollider.gameObject.SetActive(false);
         }
+        audioManager.Play(audioManager.GetSFX(), "bomb_", Random.Range(0, 3));
         GetComponent<Animator>().SetBool("hasExploded", true);
         Destroy(gameObject);
 
