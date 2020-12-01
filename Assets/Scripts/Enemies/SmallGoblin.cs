@@ -76,7 +76,7 @@ public class SmallGoblin : MonoBehaviour
             {
                 direction = -transform.right;
                 movement = -1;
-                Debug.Log(direction);
+               // Debug.Log(direction);
             }
             else
             {
@@ -139,9 +139,10 @@ public class SmallGoblin : MonoBehaviour
         anim.Play("Goblin Hit");
         if (health == 0)
         {
+            Debug.Log("Dead");
             isFinding = false;
             anim.SetBool("IsDead", true);
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 
