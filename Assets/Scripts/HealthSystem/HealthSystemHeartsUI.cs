@@ -127,6 +127,7 @@ public class HealthSystemHeartsUI : MonoBehaviour
     void HealthSystemHearts_OnDead(object sender, System.EventArgs e)
     {
         Debug.LogWarning("Dead");
+        PlayerDeath.playerDeath.OnPlayerDeath();
     }
     #endregion
 

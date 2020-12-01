@@ -65,7 +65,6 @@ public class PlayerAttack : MonoBehaviour
         else if (enemyCollider != null && enemyCollider.tag == "SmallGoblin")
         {
             SmallGoblin.smallGoblin.TakeSmallGoblinDamage();
-            Debug.Log("Collided");
         }
         else if (enemyCollider!= null)
         {
