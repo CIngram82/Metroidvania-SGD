@@ -180,6 +180,15 @@ MonoBehaviour:
     priority: 32
     playOnAwake: 0
     loop: 0
+  - name: slime_0
+    clip: {fileID: 8300000, guid: 407cf939fa9f715459ab1003f1619450, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    priority: 128
+    playOnAwake: 0
+    loop: 0
   music:
   - name: music_0
     clip: {fileID: 8300000, guid: 442c885c2e42f0443a196ad847845509, type: 3}
