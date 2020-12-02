@@ -14,6 +14,7 @@ public class GoblinBomber : MonoBehaviour
     [SerializeField] GameObject bombPrefab;
     
    [SerializeField] GameObject thrownBomb;
+    [SerializeField] GameObject bombPickup;
     bool readyBomb;
 
 
@@ -41,6 +42,8 @@ public class GoblinBomber : MonoBehaviour
         {
             isFinding = false; 
             anim.SetBool("IsDead", true);
+            Vector2 bombPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - .8f);
+            thrownBomb = Instantiate(bombPickup, bombPosition, Quaternion.identity);
             gameObject.SetActive(false);
         }
    }
