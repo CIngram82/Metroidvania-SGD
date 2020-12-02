@@ -75,6 +75,7 @@ public class DynamicFontSize : MonoBehaviour
                 }
             }
         }
+        SetStandardFontSize();
     }
 
     void OnRectTransformDimensionsChange()
