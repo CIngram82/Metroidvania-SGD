@@ -36,8 +36,8 @@ public class PlayerAttack : MonoBehaviour
             CheckForVineCollisions();
             canAttack = false;
             anim.Play("Sword_Attack");
+            anim.SetBool("isSwinging", true);
             audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
-            anim.SetBool("CanAttack", canAttack);
             Invoke("AttackCooldown", .5f);
         }
     }
@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
     private void AttackCooldown()
     {
         canAttack = true;
-        anim.SetBool("CanAttack", canAttack);
+        anim.SetBool("isSwinging", false);
     }
 
     void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
