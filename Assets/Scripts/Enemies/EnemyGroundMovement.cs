@@ -23,7 +23,7 @@ public class EnemyGroundMovement : MonoBehaviour
     {
 
         rb2D.velocity = new Vector2((transform.localScale.x > 0) ? moveSpeed : -moveSpeed, 0f);
-        anim.SetFloat("speed", moveSpeed);
+        //anim.SetFloat("speed", moveSpeed);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

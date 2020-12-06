@@ -131,12 +131,18 @@ public class SmallGoblin : MonoBehaviour
     {
         canAttack = true;
     }
+    public void NotHit()
+    {
+        anim.SetBool("Hit", false);
+    }
 
     //used in the player attack script when sphere overlap detects SmallGoblin on enemy layer.
     public void TakeSmallGoblinDamage()
     {
         health--;
-        anim.Play("Goblin Hit");
+       // anim.Play("Goblin Hit");
+        anim.SetBool("Hit", true);
+        Invoke("NotHit", 1);
         if (health == 0)
         {
             Debug.Log("Dead");

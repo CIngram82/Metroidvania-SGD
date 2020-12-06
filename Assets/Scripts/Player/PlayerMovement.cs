@@ -59,6 +59,14 @@ public class PlayerMovement : MonoBehaviour
             rend.flipX = false;
         }
        
+        if(moveHorizontal == 0 && yMovement == 0)
+        {
+            anim.SetBool("IsIdle", true);
+        }
+        else
+        {
+            anim.SetBool("IsIdle", false);
+        }
 
     }
 

@@ -34,24 +34,21 @@ public class PlayerAttack : MonoBehaviour
         {
             CheckingForEnemyCollision();
             CheckForVineCollisions();
+            anim.SetBool("IsSwinging", true);
             canAttack = false;
-            anim.Play("Sword_Attack");
-            anim.SetBool("isSwinging", true);
             audioManager.Play(audioManager.GetSFX(), "sword_", Random.Range(0, 3));
-            Invoke("AttackCooldown", .5f);
+           
         }
+      
     }
 
     private void SwordHit()
     {
-        Debug.Log("Hit");  
+        Debug.Log("Swinging");
+        anim.SetBool("IsSwinging", false);
+        canAttack = true;
     }
 
-    private void AttackCooldown()
-    {
-        canAttack = true;
-        anim.SetBool("isSwinging", false);
-    }
 
     void CheckingForEnemyCollision() // Enemy's have to be set up on an enemy layer for this to work on it.
     {
@@ -64,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else if (enemyCollider != null && enemyCollider.tag == "SmallGoblin")
         {
+            Debug.Log("Hitting smallgoblin");
             SmallGoblin.smallGoblin.TakeSmallGoblinDamage();
         }
         else if (enemyCollider!= null)
