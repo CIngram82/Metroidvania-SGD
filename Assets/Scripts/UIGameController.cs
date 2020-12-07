@@ -22,8 +22,7 @@ public class UIGameController : UIController
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OnAudioSettings();
-            //OnSettings();
+            OnSettings();
         }
     }
 }
