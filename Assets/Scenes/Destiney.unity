@@ -1746,6 +1746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 424975361854358375, guid: 4ac3171aad71c5a4db32eccda8b97186, type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 424975361854358396, guid: 4ac3171aad71c5a4db32eccda8b97186, type: 3}
       propertyPath: m_Name
       value: smallGoblin

@@ -53,13 +53,14 @@ public class SmallGoblin : MonoBehaviour
      
     }
 
-    bool IsBlocked()
+    bool IsBlocked() //Checks if there is anything on the sides of it blocking it's path that belongs to the ground layer. This does not check underneath it. Depending on the direction it's going it will change directions when blocked.
     {
         
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, 1, groundLayer);
         Debug.DrawRay(transform.position,  direction * 1, Color.red, 2f);
         if (hitInfo.collider != null)
         {
+           
             if (movement == 1f)
             {
                 direction = -transform.right;
@@ -72,28 +73,29 @@ public class SmallGoblin : MonoBehaviour
             }
             return true;
         }
+      
         return false;
     }
 
     void CheckingDistance()
     {
       
-       if (distance >= 3)
-       {
-            chasing = false;
-       }
-        else if (distance < 3)
+        if (distance >= 3)
         {
+            chasing = false;
+        }
+       else if (distance < 3 && IsBlocked() == false)
+       {
             chasing = true;
             rig.velocity = new Vector2(distance * movement, rig.velocity.y);
-        }
-
-        if (!chasing)
+       }
+         if (!chasing)
         {
             IsBlocked();
             rig.velocity = new Vector2(movement * speed, rig.velocity.y);
             anim.SetFloat("speed", speed);
         }
+       
 
     }
 
@@ -102,7 +104,7 @@ public class SmallGoblin : MonoBehaviour
 
         while (isFinding)
         {
-
+           
             if (distance < 1 && canAttack)
             {
                 canAttack = false;
@@ -133,8 +135,7 @@ public class SmallGoblin : MonoBehaviour
         anim.SetTrigger("Hit");
         Debug.Log("Goblin Life" + health);
         health--;
-      //  anim.SetTrigger("Hit");
-      
+       
         if (health <= 0)
         {
             Debug.Log("Dead");
@@ -143,6 +144,5 @@ public class SmallGoblin : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
 
 }
