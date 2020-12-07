@@ -62,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
         else if (enemyCollider != null && enemyCollider.tag == "SmallGoblin")
         {
             Debug.Log("Hitting smallgoblin");
-            SmallGoblin.smallGoblin.TakeSmallGoblinDamage();
+            enemyCollider.GetComponent<SmallGoblin>().TakeSmallGoblinDamage();
         }
         else if (enemyCollider!= null)
         {

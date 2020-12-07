@@ -5,7 +5,7 @@ using UnityEngine;
 public class SmallGoblin : MonoBehaviour
 {
 
-    public static SmallGoblin smallGoblin;
+   
     [SerializeField] float speed = 1f;
     [SerializeField] float movement;
     private Rigidbody2D rig;
@@ -23,7 +23,6 @@ public class SmallGoblin : MonoBehaviour
 
     void Start()
     {
-        smallGoblin = this;
         playerobj = GameObject.Find("Player");
         isFinding = true;
         canAttack = true;
@@ -53,17 +52,6 @@ public class SmallGoblin : MonoBehaviour
         }
      
     }
-    private void FixedUpdate()
-    {
-        
-        if (!chasing)
-        {
-            IsBlocked();
-            rig.velocity = new Vector2(movement * speed, rig.velocity.y);
-            anim.SetFloat("speed", speed);
-        }
-       
-    }
 
     bool IsBlocked()
     {
@@ -76,7 +64,6 @@ public class SmallGoblin : MonoBehaviour
             {
                 direction = -transform.right;
                 movement = -1;
-               // Debug.Log(direction);
             }
             else
             {
@@ -100,7 +87,14 @@ public class SmallGoblin : MonoBehaviour
             chasing = true;
             rig.velocity = new Vector2(distance * movement, rig.velocity.y);
         }
-       
+
+        if (!chasing)
+        {
+            IsBlocked();
+            rig.velocity = new Vector2(movement * speed, rig.velocity.y);
+            anim.SetFloat("speed", speed);
+        }
+
     }
 
     IEnumerator FindplayerLocation()
@@ -120,7 +114,7 @@ public class SmallGoblin : MonoBehaviour
                     playerobj.GetComponent<Player>().Damage(1);
                     playerobj.GetComponent<Animator>().SetTrigger("isHit");
                 }
-                Invoke("Attacking", 2);
+                Invoke("DoneAttacking", 1);
             }
             yield return null;
 
@@ -128,28 +122,25 @@ public class SmallGoblin : MonoBehaviour
         yield return new WaitForSeconds(1);
     }
 
-    public void Attacking()
+    public void DoneAttacking()
     {
         canAttack = true;
-    }
-    public void NotHit()
-    {
-        anim.SetBool("Hit", false);
     }
 
     //used in the player attack script when sphere overlap detects SmallGoblin on enemy layer.
     public void TakeSmallGoblinDamage()
     {
+        anim.SetTrigger("Hit");
         Debug.Log("Goblin Life" + health);
         health--;
-        anim.SetBool("Hit", true);
-        Invoke("NotHit", 1);
-        if (health == 0)
+      //  anim.SetTrigger("Hit");
+      
+        if (health <= 0)
         {
             Debug.Log("Dead");
             isFinding = false;
-            anim.SetBool("IsDead", true);
-            this.gameObject.SetActive(false);
+            anim.SetTrigger("Dead");
+            gameObject.SetActive(false);
         }
     }
 

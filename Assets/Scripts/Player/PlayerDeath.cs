@@ -13,9 +13,15 @@ public class PlayerDeath : MonoBehaviour
         Time.timeScale = 1;
     }
     public void  OnPlayerDeath()
-  {
-        Time.timeScale = 0;
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("IsDead");
+       // Time.timeScale = 0;
         deathPanel.SetActive(true);
-  }
+    }
+
+    public void StopTime()
+    {
+        Time.timeScale = 0;
+    }
  
 }
