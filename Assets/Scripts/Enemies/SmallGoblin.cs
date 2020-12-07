@@ -118,6 +118,7 @@ public class SmallGoblin : MonoBehaviour
                 if (playerCollider != null)
                 {
                     playerobj.GetComponent<Player>().Damage(1);
+                    playerobj.GetComponent<Animator>().SetTrigger("isHit");
                 }
                 Invoke("Attacking", 2);
             }
@@ -139,8 +140,8 @@ public class SmallGoblin : MonoBehaviour
     //used in the player attack script when sphere overlap detects SmallGoblin on enemy layer.
     public void TakeSmallGoblinDamage()
     {
+        Debug.Log("Goblin Life" + health);
         health--;
-       // anim.Play("Goblin Hit");
         anim.SetBool("Hit", true);
         Invoke("NotHit", 1);
         if (health == 0)
