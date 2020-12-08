@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumpsAllowed;
    [SerializeField] private LayerMask groundLayer;
     float yMovement;
-    public float moveHorizontal;
+    float moveHorizontal;
 
 
 
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-         moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
         ridg.velocity = new Vector2(moveHorizontal * speed, ridg.velocity.y);
         anim.SetFloat("Move", Mathf.Abs(moveHorizontal));
         yMovement = ridg.velocity.y;

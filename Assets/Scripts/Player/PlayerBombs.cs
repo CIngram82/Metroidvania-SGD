@@ -6,7 +6,6 @@ public class PlayerBombs : MonoBehaviour
 {
     public static PlayerBombs playerBombs;
     public bool hasBomb;
-    // public int bombCounter;
     [SerializeField] GameObject bombPrefab;
     AudioManager audioManager;
 

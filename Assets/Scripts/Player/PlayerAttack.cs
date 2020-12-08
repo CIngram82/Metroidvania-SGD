@@ -8,8 +8,6 @@ public class PlayerAttack : MonoBehaviour
 
     public static PlayerAttack playerAttack;
     private Animator anim;
-
-
     public bool hasSword;
     bool canAttack;
     [SerializeField] private LayerMask enemyLayer;
