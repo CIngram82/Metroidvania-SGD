@@ -1,13 +1,43 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UIGameController : UIController
 {
 #pragma warning disable 0649
+    [Header("Image")]
+    [SerializeField] Image bombImage;
+    [Header("Text")]
+    [SerializeField] TextMeshProUGUI coinText;
+    [SerializeField] TextMeshProUGUI potionsText;
     [Header("Panels")]
-    [SerializeField] GameObject Panel;
+    //[SerializeField] GameObject Panel;
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject audioPanel;
 #pragma warning restore 0649
+
+
+    public void UpdateBombImage(bool hasBomb)
+    {
+        Color color = bombImage.color;
+        if (hasBomb)
+        {
+            color.a = 1.0f;
+        }
+        else
+        {
+            color.a = 0.5f;
+        }
+        bombImage.color = color;
+    }
+    public void UpdatePotionsText(int amount)
+    {
+        coinText.text = amount.ToString("00");
+    }
+    public void UpdateCoinsText(int amount)
+    {
+        coinText.text = amount.ToString("00");
+    }
 
     public void OnAudioSettings()
     {

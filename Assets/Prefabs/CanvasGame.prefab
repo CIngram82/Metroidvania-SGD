@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 5851434874526975837}
   - component: {fileID: 5851434874526975826}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1720,14 +1720,14 @@ PrefabInstance:
     - target: {fileID: 3293141550328866228, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: settingPanel
       value: 
-      objectReference: {fileID: 5851434874337421937}
+      objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -399.74356
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -224.61537
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1735,15 +1735,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1767,15 +1767,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.025641
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.025641
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.025641
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3293141550328866234, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_Name
