@@ -11,6 +11,7 @@ public class PlayerPickUps : MonoBehaviour
     [SerializeField] private int bombCounter;
     [SerializeField] GameObject endPanel;
     public TextMeshProUGUI paneltext;
+    [SerializeField] UIGameController ui;
     
 
     private void Start()
@@ -37,7 +38,9 @@ public class PlayerPickUps : MonoBehaviour
         {
 
             other.gameObject.SetActive(false);
+            
             coinCounter++;
+            ui.UpdateCoinsText(coinCounter);
             
         }
         if(other.gameObject.tag == "Sword")
