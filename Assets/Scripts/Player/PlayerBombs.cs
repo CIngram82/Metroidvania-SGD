@@ -23,7 +23,8 @@ public class PlayerBombs : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J) && hasBomb)
         {
-            Instantiate(bombPrefab, transform.position + (transform.forward), transform.rotation);
+            Vector2 bombPosition = new Vector2(gameObject.transform.position.x + 1, gameObject.transform.position.y);
+            Instantiate(bombPrefab, bombPosition, transform.rotation);
             Debug.Log("canPlace");
             hasBomb = false;
             Invoke("ReloadBomb", 2);

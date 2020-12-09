@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerPickUps : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerPickUps : MonoBehaviour
     public static PlayerPickUps playerPickups;
     [SerializeField] private int coinCounter;
     [SerializeField] private int bombCounter;
+    [SerializeField] GameObject endPanel;
+    public TextMeshProUGUI paneltext;
     
 
     private void Start()
@@ -46,6 +49,17 @@ public class PlayerPickUps : MonoBehaviour
         {
             Debug.Log("Grabbed Health Item");
             gameObject.GetComponent<Player>().Heal(1);
+            other.gameObject.SetActive(false);
+        }
+        if(other.gameObject.tag == "Cursed")
+        {
+            gameObject.GetComponent<Player>().Damage(2);
+            other.gameObject.SetActive(false);
+        }
+        if(other.gameObject.tag == "Treasure")
+        {
+            paneltext.text = "You found the Treasure! You Win!";
+            endPanel.SetActive(true);
             other.gameObject.SetActive(false);
         }
     }

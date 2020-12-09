@@ -14,6 +14,8 @@ TagManager:
   - Breakable
   - Boss
   - SmallGoblin
+  - Cursed
+  - Treasure
   layers:
   - Default
   - TransparentFX
