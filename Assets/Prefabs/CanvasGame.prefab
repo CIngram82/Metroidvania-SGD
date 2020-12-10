@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 5851434874337421938}
   - component: {fileID: 5851434874337421939}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: SettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2795,7 +2795,7 @@ PrefabInstance:
     - target: {fileID: 3293141550328866228, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: settingPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5851434874337421937}
     - target: {fileID: 3293141550328866229, guid: b42eb4c1765f2784d9d035793898eb5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -863,7 +863,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpForce: 0
-  jumpsAllowed: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -898,10 +897,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23762a9c6a0024459a2c406866c0052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paneltext: {fileID: 0}
   coinCounter: 0
   bombCounter: 0
   endPanel: {fileID: 0}
-  paneltext: {fileID: 0}
   ui: {fileID: 0}
 --- !u!95 &2763210982858626685
 Animator:
