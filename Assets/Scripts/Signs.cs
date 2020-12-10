@@ -4,6 +4,7 @@ using TMPro;
 public class Signs : MonoBehaviour
 {
     enum SignType { Image, Text }
+#pragma warning disable 0649
     [Header("Sign Display Type")]
     [SerializeField] SignType signType;
     [Header("Image")]
@@ -11,8 +12,10 @@ public class Signs : MonoBehaviour
     [SerializeField] SpriteRenderer signImage;
     [SerializeField] Sprite[] itemSprites;
     [Header("Text")]
-    [SerializeField] string text;
     [SerializeField] TextMeshPro signText;
+    [TextArea(5, 10)]
+    [SerializeField] string text;
+#pragma warning restore 0649
 
 
     void Start()

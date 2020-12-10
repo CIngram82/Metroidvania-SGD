@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BombScript : MonoBehaviour
 {
+#pragma warning disable 0649
     [SerializeField] private LayerMask bombLayer;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private GameObject player ;
+#pragma warning restore 0649
     AudioManager audioManager;
 
     private void Start()

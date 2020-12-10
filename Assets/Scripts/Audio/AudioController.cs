@@ -18,17 +18,39 @@ public class AudioController : MonoBehaviour
     {
         audioMixerGroups[index].Volume = volume;
     }
+    /// <summary>
+    /// Converts a percentage to dB scale.
+    /// </summary>
+    /// <param name="percent">Percent of Max volume.</param>
+    /// <returns>Volume in Decibels.</returns>
+    public static float PercentToVolume(float percent)
+    {
+        return Mathf.Log10(percent / 100) * 20;
+    }
+    /// <summary>
+    /// Converts dB scale to a percentage.
+    /// </summary>
+    /// <param name="volume"></param>
+    /// <returns>Percentage of Max volume.</returns>
+    public static float VolumeToPercent(float volume)
+    {
+        return Mathf.Pow(10, volume / 20);
+    }
 
     void Start()
     {
         AudioManager.AM.Play(AudioManager.AM.GetMusic(), "music_");
+        SetMixerVolume(1, 0.3f);     //Sets Music volume to 30%
     }
 }
 
 [System.Serializable]
 public class AudioMixerHolder
 {
+#pragma warning disable 0649
     [SerializeField] AudioMixerGroup mixerGroup;
+#pragma warning restore 0649
+
 
     public string Name { get { return mixerGroup.name; } }
     public float Volume

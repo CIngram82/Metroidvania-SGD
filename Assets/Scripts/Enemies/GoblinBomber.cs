@@ -1,22 +1,21 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GoblinBomber : MonoBehaviour
 {
-
     public static GoblinBomber goblinBomber;
-    private int health;
+#pragma warning disable 0649
     [SerializeField] private Animator anim;
-    private GameObject playerobj;
-    private float distance;
-    private bool isFinding;
     [SerializeField] GameObject bombPrefab;
-    
-   [SerializeField] GameObject thrownBomb;
+    [SerializeField] GameObject thrownBomb;
     [SerializeField] GameObject bombPickup;
-    bool readyBomb;
+#pragma warning restore 0649
 
+    GameObject playerobj;
+    int health;
+    float distance;
+    bool isFinding;
+    bool readyBomb;
 
 
     void Start()
@@ -24,35 +23,35 @@ public class GoblinBomber : MonoBehaviour
         goblinBomber = this;
         health = 5;
         anim = gameObject.GetComponent<Animator>();
-        playerobj = GameObject.Find("Player");  
+        playerobj = GameObject.Find("Player");
         isFinding = true;
         StartCoroutine(FindplayerLocation());
         readyBomb = true;
     }
 
 
-   //used in the player attack script when sphere overlap detects boss on enemy layer.
-   public void TakeGoblinDamage()
-   {
+    //used in the player attack script when sphere overlap detects boss on enemy layer.
+    public void TakeGoblinDamage()
+    {
 
         health--;
         anim.Play("Bomber_Goblin_Hit");
-        
-        if(health == 0)
+
+        if (health == 0)
         {
-            isFinding = false; 
+            isFinding = false;
             anim.SetBool("IsDead", true);
             Vector2 bombPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - .8f);
             thrownBomb = Instantiate(bombPickup, bombPosition, Quaternion.identity);
             gameObject.SetActive(false);
         }
-   }
+    }
 
 
     IEnumerator FindplayerLocation()
     {
 
-        while (isFinding) 
+        while (isFinding)
         {
 
             distance = Vector3.Distance(gameObject.transform.position, playerobj.transform.position);
@@ -79,7 +78,7 @@ public class GoblinBomber : MonoBehaviour
         readyBomb = true;
     }
 
-  
+
 
 }
 

@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RoomCameraSwap : MonoBehaviour
 {
-    [SerializeField] private GameObject virtualCam;
+#pragma warning disable 0649
+    [SerializeField] GameObject virtualCam;
+#pragma warning restore 0649
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

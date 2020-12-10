@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &41189177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1094662496, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+  m_PrefabInstance: {fileID: 721472897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &142472625
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,10 +462,10 @@ RectTransform:
   m_Father: {fileID: 470897120}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 167.5, y: -75}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458762895
 MonoBehaviour:
@@ -603,7 +608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470897119}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
@@ -936,6 +941,79 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &721472897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 748914076, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743186310, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390456666514740933, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1627396676}
+    - target: {fileID: 6390456666514740933, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAudioSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843075, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787145566111843133, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
 --- !u!1 &804698907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,10 +1131,10 @@ RectTransform:
   m_Father: {fileID: 470897120}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904602249
 MonoBehaviour:
@@ -1185,10 +1263,10 @@ RectTransform:
   m_Father: {fileID: 470897120}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 57.5, y: -25}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112841635
 MonoBehaviour:
@@ -1451,10 +1529,10 @@ RectTransform:
   m_Father: {fileID: 470897120}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 167.5, y: -25}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384408539
 MonoBehaviour:
@@ -1775,6 +1853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627396675}
   - component: {fileID: 1627396674}
+  - component: {fileID: 1627396676}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -1809,6 +1888,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627396676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627396673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e77724907b13c14cb32d53900a1cbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombImage: {fileID: 0}
+  coinText: {fileID: 0}
+  potionsText: {fileID: 0}
+  settingPanel: {fileID: 0}
+  audioPanel: {fileID: 41189177}
 --- !u!1 &1844055146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,10 +2073,10 @@ RectTransform:
   m_Father: {fileID: 470897120}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 57.5, y: -75}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139285851
 MonoBehaviour:
@@ -2025,9 +2121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627396674}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: OnHelp
+      - m_Target: {fileID: 1627396676}
+        m_TargetAssemblyTypeName: UIGameController, Assembly-CSharp
+        m_MethodName: OnAudioSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

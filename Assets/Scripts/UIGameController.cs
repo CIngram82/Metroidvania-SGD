@@ -42,17 +42,27 @@ public class UIGameController : UIController
     public void OnAudioSettings()
     {
         audioPanel.SetActive(!audioPanel.activeSelf);
+        settingPanel?.SetActive(!settingPanel.activeSelf);
     }
     public void OnSettings()
     {
-        settingPanel.SetActive(!settingPanel.activeSelf);
+        settingPanel?.SetActive(!settingPanel.activeSelf);
+        Time.timeScale = settingPanel.activeSelf ? 0 : 1;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OnSettings();
+            if (audioPanel.activeSelf)
+            {
+                OnAudioSettings();
+                OnSettings();
+            }
+            else
+            {
+                OnSettings();
+            }
         }
     }
 }

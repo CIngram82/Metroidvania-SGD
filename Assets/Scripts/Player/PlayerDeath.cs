@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
     public static PlayerDeath playerDeath;
+#pragma warning disable 0649
     [SerializeField] GameObject deathPanel;
+#pragma warning restore 0649
 
     void Start()
     {

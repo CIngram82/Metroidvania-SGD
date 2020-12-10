@@ -1,37 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class PlayerPickUps : MonoBehaviour
 {
-
     public static PlayerPickUps playerPickups;
-    [SerializeField] private int coinCounter;
-    [SerializeField] private int bombCounter;
+#pragma warning disable 0649
+    [SerializeField] TextMeshProUGUI paneltext;
+    [SerializeField] int coinCounter;
+    [SerializeField] int bombCounter;
     [SerializeField] GameObject endPanel;
-    public TextMeshProUGUI paneltext;
     [SerializeField] UIGameController ui;
-    
+#pragma warning restore 0649
 
-    private void Start()
+
+    void Start()
     {
         playerPickups = this;
         coinCounter = 0;
         bombCounter = 0;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "JumpSkill")
         {
             other.gameObject.SetActive(false);
-            PlayerMovement.playerMovement.jumpsAllowed = 2;
+            PlayerMovement.playerMovement.JumpsAllowed = 2;
         }
         if(other.gameObject.tag == "Bomb")
         {
             other.gameObject.SetActive(false);
             bombCounter++;
-            PlayerBombs.playerBombs.hasBomb = true;
+            PlayerBombs.playerBombs.HasBomb = true;
            
         }
         if(other.gameObject.tag == "Coin")
@@ -46,7 +45,7 @@ public class PlayerPickUps : MonoBehaviour
         if(other.gameObject.tag == "Sword")
         {
             other.gameObject.SetActive(false);
-            PlayerAttack.playerAttack.hasSword = true;
+            PlayerAttack.playerAttack.HasSword = true;
         }
         if(other.gameObject.tag == "HealthItem")
         {
@@ -67,6 +66,8 @@ public class PlayerPickUps : MonoBehaviour
         }
     }
 
-  
-
+    void Awake()
+    {
+        ui = ui ? ui : FindObjectOfType<UIGameController>();
+    }
 }

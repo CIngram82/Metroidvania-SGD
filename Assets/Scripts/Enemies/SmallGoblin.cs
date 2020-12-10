@@ -1,23 +1,22 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SmallGoblin : MonoBehaviour
 {
-
-   
+#pragma warning disable 0649
     [SerializeField] float speed = 1f;
     [SerializeField] float movement;
-    private Rigidbody2D rig;
-    private Animator anim;
-    private SpriteRenderer rend;
-    bool chasing;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] float distance;
+#pragma warning restore 0649
+    Rigidbody2D rig;
+    Animator anim;
+    SpriteRenderer rend;
+    GameObject playerobj;
     Vector2 direction;
-   [SerializeField] float distance;
+    bool chasing;
     bool isFinding;
-    private GameObject playerobj;
     bool canAttack;
     int health;
 
@@ -50,18 +49,18 @@ public class SmallGoblin : MonoBehaviour
         {
             rend.flipX = false;
         }
-     
+
     }
 
     bool IsBlocked() //Checks if there is anything on the sides of it blocking it's path that belongs to the ground layer. This does not check underneath it. Depending on the direction it's going it will change directions when blocked.
     {
-        
+
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, 1, groundLayer);
-        
-        Debug.DrawRay(transform.position,  direction * 1, Color.red, 2f);
+
+        Debug.DrawRay(transform.position, direction * 1, Color.red, 2f);
         if (hitInfo.collider != null)
         {
-           
+
             if (movement == 1f)
             {
                 direction = -transform.right;
@@ -72,10 +71,10 @@ public class SmallGoblin : MonoBehaviour
                 movement = 1;
                 direction = transform.right;
             }
-            Debug.Log(movement);
+            //Debug.Log(movement);
             return true;
         }
-           
+
         return false;
     }
 
@@ -104,11 +103,11 @@ public class SmallGoblin : MonoBehaviour
 
     void CheckingDistance()
     {
-         if (distance >= 3)
-         {
+        if (distance >= 3)
+        {
             IsBlocked();
             chasing = false;
-         }
+        }
         else if (distance < 3 && IsBlocked() == false)
         {
 
@@ -116,12 +115,12 @@ public class SmallGoblin : MonoBehaviour
             rig.velocity = new Vector2(distance * movement, rig.velocity.y);
         }
         if (!chasing)
-         {
+        {
             IsBlocked();
             rig.velocity = new Vector2(movement * speed, rig.velocity.y);
             anim.SetFloat("speed", speed);
-         }
-       
+        }
+
 
     }
 
@@ -130,7 +129,7 @@ public class SmallGoblin : MonoBehaviour
 
         while (isFinding)
         {
-           
+
             if (distance < 1 && canAttack)
             {
                 canAttack = false;
@@ -142,11 +141,11 @@ public class SmallGoblin : MonoBehaviour
                     chasing = false;
                     // CanSeePlayer();
                     IsBlocked();
-                   if(IsBlocked() == false)
-                   {
+                    if (IsBlocked() == false)
+                    {
                         CanSeePlayer();
-                   }
-            
+                    }
+
                     playerobj.GetComponent<Player>().Damage(1);
                     playerobj.GetComponent<Animator>().SetTrigger("isHit");
                 }
@@ -169,7 +168,7 @@ public class SmallGoblin : MonoBehaviour
         anim.SetTrigger("Hit");
         Debug.Log("Goblin Life" + health);
         health--;
-       
+
         if (health <= 0)
         {
             Debug.Log("Dead");

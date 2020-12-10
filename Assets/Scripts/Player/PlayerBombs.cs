@@ -1,20 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerBombs : MonoBehaviour
 {
     public static PlayerBombs playerBombs;
-    public bool hasBomb;
+#pragma warning disable 0649
+    [SerializeField] bool hasBomb;
     [SerializeField] GameObject bombPrefab;
-    AudioManager audioManager;
+#pragma warning restore 0649
 
+    public bool HasBomb{ get { return hasBomb; } set { hasBomb = value; } }
 
     void Start()
     {
         playerBombs = this;
         hasBomb = false;
-        audioManager = AudioManager.AM;
     }
 
  

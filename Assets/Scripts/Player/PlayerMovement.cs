@@ -1,32 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement playerMovement;
-    private Rigidbody2D ridg;
-    private SpriteRenderer rend;
-    private Animator anim;
-   
+#pragma warning disable 0649
     [SerializeField] private float speed;
-    private bool canJump;
-   [SerializeField] private float jumpForce;
-    private int jumpCount = 1;
-    public int jumpsAllowed;
-   [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private LayerMask groundLayer;
+#pragma warning restore 0649
+    public int JumpsAllowed { get; set; }
+
+    Rigidbody2D ridg;
+    SpriteRenderer rend;
+    Animator anim;
+    bool canJump;
+    int jumpCount = 1;
     float yMovement;
     float moveHorizontal;
 
 
-
-
-
     void Start()
     {
-       
+
         playerMovement = this;
-        jumpsAllowed = 1;
+        JumpsAllowed = 1;
         ridg = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -47,21 +44,21 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Move", Mathf.Abs(moveHorizontal));
         yMovement = ridg.velocity.y;
         anim.SetFloat("yMovement", yMovement);
-        if(yMovement < 0)
+        if (yMovement < 0)
         {
             ridg.gravityScale = 2.5f;
         }
 
         if (moveHorizontal < 0)
-        { 
+        {
             rend.flipX = true;
         }
-        else if(moveHorizontal > 0)
+        else if (moveHorizontal > 0)
         {
             rend.flipX = false;
         }
-       
-        if(moveHorizontal == 0 && yMovement == 0)
+
+        if (moveHorizontal == 0 && yMovement == 0)
         {
             anim.SetBool("IsIdle", true);
         }
@@ -72,10 +69,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void CheckJumping() 
+    void CheckJumping()
     {
 
-        
+
         if (Input.GetKey(KeyCode.Space))
         {
             IsGrounded();
@@ -87,16 +84,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetBool("IsJumping", false);
             }
-        
-            
-            
+
+
+
 
         }
-               
-        else if(Input.GetKeyUp(KeyCode.Space))
+
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
             IsGrounded();
-            if (canJump && jumpCount <= jumpsAllowed)
+            if (canJump && jumpCount <= JumpsAllowed)
             {
                 anim.SetBool("IsJumping", false);
                 if (jumpCount == 1)
@@ -105,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                     ridg.gravityScale = 1.5f;
                 }
-                
+
                 if (jumpCount >= 2)
                 {
                     float playerY = ridg.transform.position.y;
@@ -113,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
                     ridg.velocity = new Vector2(ridg.velocity.x, jumpForce);
                     ridg.gravityScale = 1.5f;
                 }
-               
+
                 jumpCount++;
             }
             else
@@ -122,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-      
+
 
     }
 
@@ -130,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1, groundLayer);
         Debug.DrawRay(transform.position, Vector2.down * 1, Color.red, 2f);
-        if(hitInfo.collider != null)
+        if (hitInfo.collider != null)
         {
             canJump = true;
             ridg.gravityScale = 1f;
@@ -140,6 +137,6 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-  
+
 
 }
