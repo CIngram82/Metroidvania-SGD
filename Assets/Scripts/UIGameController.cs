@@ -61,11 +61,17 @@ public class UIGameController : UIController
                 if (settingPanel)
                     OnSettings();
             }
-            else if(settingPanel)
+            else if (settingPanel)
             {
                 OnSettings();
             }
         }
+    }
+
+    void Awake()
+    {
+        Debug.Log("audioPanel " + audioPanel);
+        audioPanel = AudioManager.AM.gameObject.GetComponentInChildren<Canvas>().transform.GetChild(0).gameObject;
     }
 }
 
