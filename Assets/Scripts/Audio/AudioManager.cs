@@ -70,11 +70,15 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (AM != null)
+        if (AM != null && AM != this)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            return;
         }
-        AM = this;
+        else
+        {
+            AM = this;
+        }
         DontDestroyOnLoad(gameObject);
 
         LoadAudioSource(music, musicMixerGroup);

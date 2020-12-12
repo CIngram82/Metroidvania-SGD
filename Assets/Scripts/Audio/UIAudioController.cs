@@ -31,6 +31,12 @@ public class UIAudioController : MonoBehaviour
         audioSliders[2].UpdateSlider(audioController.AudioMixerGroups[2].Volume);
     }
 
+    void AudioController_OnVolumeChange(object sender, System.EventArgs e)
+    {
+        SyncSliders();
+        Debug.LogWarning("Volume Updated.");
+    }
+
     bool SyncSliders()
     {
         if (audioSliders.Count != audioController.AudioMixerGroups.Count)
@@ -52,6 +58,7 @@ public class UIAudioController : MonoBehaviour
     void Start()
     {
         SyncSliders();
+        audioController.OnVolumeChange += AudioController_OnVolumeChange;
     }
 }
 

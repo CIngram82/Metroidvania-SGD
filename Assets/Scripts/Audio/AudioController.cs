@@ -1,12 +1,15 @@
 ﻿/* Refactor to making more abstract:
  */
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioController : MonoBehaviour
 {
+    public event EventHandler OnVolumeChange;
+
 #pragma warning disable 0649
     [Header("Audio Mixers")]
     [SerializeField] List<AudioMixerHolder> audioMixerGroups;
@@ -41,6 +44,7 @@ public class AudioController : MonoBehaviour
     {
         AudioManager.AM.Play(AudioManager.AM.GetMusic(), "music_");
         SetMixerVolume(1, 0.3f);     //Sets Music volume to 30%
+        OnVolumeChange?.Invoke(this, EventArgs.Empty);
     }
 }
 
