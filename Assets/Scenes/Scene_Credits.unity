@@ -394,7 +394,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263435379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,9 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b46c4df46a47a4f94e260738696b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1503727130}
-  scrollSpeed: 25
-  textCrawlerTransform: {fileID: 263435378}
+  text: {fileID: 1503727129}
+  scrollSpeed: 50
 --- !u!1 &591397826
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,10 +527,10 @@ RectTransform:
   m_Father: {fileID: 26602636}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0.1}
-  m_AnchorMax: {x: 0.95, y: 0.85}
-  m_AnchoredPosition: {x: 0, y: -22.500011}
-  m_SizeDelta: {x: 0, y: 45.00003}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -42.5}
+  m_SizeDelta: {x: -100, y: -85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690242490
 MonoBehaviour:
@@ -935,11 +934,11 @@ RectTransform:
   m_Father: {fileID: 263435378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0}
-  m_AnchorMax: {x: 0.8, y: 1}
-  m_AnchoredPosition: {x: 0, y: -388}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 196}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1503727130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,52 +959,68 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<B>Chris Ingram</B>
+  m_text: '<size=+8><B>Chris Ingram</B></size>
+
+    <size=4> </size>
 
     Programming
 
-    Level Design
+    Level
+    Design
 
     Enemy Programming
 
-    Team
-    Lead
+    Team Lead
 
 
-    <B>Destiney Price</B>
+    <size=+8><B>Destiney Price</B></size>
+
+    <size=4>
+    </size>
 
     Programming
 
     Character Design
 
-    Character
-    Programming
+    Character Programming
 
-    Enemy Programming
+    Enemy
+    Programming
 
     Goblin Master
 
 
-    <B>Robert Secoura</B>
+    <size=+8><B>Robert Secoura</B></size>
+
+    <size=4>
+    </size>
 
     Programming
 
-    Health
-    System
+    Health System Programming
 
-    Game UI
+    Game UI Design
 
-    Menu Design
+    Menu
+    Design
+
+    Sound Design
 
     Audio Master
 
 
-    <B>Art Assets</B>
+    <size=+6><B>Art Assets</B></size>
 
     Spries
     - @sir_shazam
 
     Treasure - Clint Bellanger
+
+
+    <size=+6><B>Sound Assets</B></size>
+
+    KaBoom
+    - unfa
 
 
 '
@@ -1035,12 +1050,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 22
   m_fontSizeBase: 16
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -1092,7 +1107,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503727128}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
@@ -1131,11 +1146,11 @@ RectTransform:
   m_Father: {fileID: 929394318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 187.4}
-  m_SizeDelta: {x: 408, y: 51.559845}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 408, y: 75}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1512469382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,12 +1198,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.25
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

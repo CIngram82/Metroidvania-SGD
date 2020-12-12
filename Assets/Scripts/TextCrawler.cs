@@ -1,37 +1,37 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using UnityEngine.UI;
 
 public class TextCrawler : MonoBehaviour
 {
 #pragma warning disable 0649
-	[SerializeField] TextMeshProUGUI text;
-	[SerializeField] float scrollSpeed;
-	[SerializeField] RectTransform textCrawlerTransform;
+    //[SerializeField] TextMeshProUGUI text;
+    [SerializeField] RectTransform text;
+    [SerializeField] float scrollSpeed;
 #pragma warning restore 0649
 
 
-	IEnumerator TextCrawlerVert()
-	{
-		float scrollPos = 0.0f;
-		float height = text.rectTransform.rect.height;
-		Vector3 startPos = textCrawlerTransform.position;
+    IEnumerator TextCrawlerVert()
+    {
+        yield return new WaitForEndOfFrame();   // Time for ContentSizeFitter to calculate size.
+        float height = text.rect.height;
+        float scrollPos = (-height / 2) - 100;
 
-		while (scrollPos < (height * 2) + (Screen.height))
-		{
-			textCrawlerTransform.position = new Vector3(startPos.x, scrollPos, startPos.z);
-			scrollPos += scrollSpeed * Time.deltaTime;
-			yield return null;
-		}
-		yield return new WaitForSeconds(3.0f);
-		SceneManager.LoadScene(0);
-	}
+        while (scrollPos < (Screen.height) + (height / 2))
+        {
+            text.anchoredPosition = Vector3.up * scrollPos;
+            scrollPos += scrollSpeed * Time.deltaTime;
+            yield return null;
+        }
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(0);
+    }
 
-	void Start()
-	{
-		StartCoroutine(TextCrawlerVert());
-	}
+    void Start()
+    {
+        StartCoroutine(TextCrawlerVert());
+    }
 }
 
 
