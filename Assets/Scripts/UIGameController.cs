@@ -42,7 +42,8 @@ public class UIGameController : UIController
     public void OnAudioSettings()
     {
         audioPanel.SetActive(!audioPanel.activeSelf);
-        settingPanel?.SetActive(!settingPanel.activeSelf);
+        if (settingPanel)
+            settingPanel?.SetActive(!settingPanel.activeSelf);
     }
     public void OnSettings()
     {
@@ -57,9 +58,10 @@ public class UIGameController : UIController
             if (audioPanel.activeSelf)
             {
                 OnAudioSettings();
-                OnSettings();
+                if (settingPanel)
+                    OnSettings();
             }
-            else
+            else if(settingPanel)
             {
                 OnSettings();
             }

@@ -952,6 +952,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -55
       objectReference: {fileID: 0}
+    - target: {fileID: 1094662498, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
     - target: {fileID: 1743186310, guid: 962bfc15a4ef5d847a80acf60aa2ce5b, type: 3}
       propertyPath: m_SortingOrder
       value: 1
